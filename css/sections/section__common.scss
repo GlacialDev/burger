@@ -7,6 +7,11 @@
 	height: 100vh;
 }
 
+.container {
+	margin: 0 auto;
+	width: 940px;
+}
+
 @each $section in (first-screen, we, burgers, team, menu, form) {
 	.section__#{$section} {
 		min-height: 650px;

@@ -1,9 +1,12 @@
-.container {
-	margin: 0 auto;
-	width: 940px;
+.container__first-screen {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
 }
 
 .header {
+	flex-grow: 0;
 	padding-top: 10px;
 	width: 100%;
 	display: flex;
@@ -54,6 +57,7 @@
 }
 
 .order__link {
+	transition: 0.5s;
  	border-radius: 5px;
  	background-color: rgb(228, 80, 40);
  	width: 97px;
@@ -68,4 +72,53 @@
  	&:hover {
  	background-color: rgb(193, 64, 30);
  	}
+}
+
+.section-first__content {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	flex-flow: row nowrap;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.section-first__image {
+	display: inline-block;
+}
+
+.section-first__text {
+	display: inline-block;
+	margin-top: 60px;
+	padding-left: 20px;
+}
+
+.section-first__title {
+	font-family: 'Gagalin';
+	font-size: 72px;
+	text-transform: uppercase;
+	color: $orange;
+}
+
+.section-first__text-burgers {
+	font-family: 'Lifehack';
+	font-size: 65px;
+	color: #fff;
+}
+
+.section-first__arrow {
+	flex-grow: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow__link {
+	transition: 0.5s;
+	padding-top: 50px;
+	margin-bottom: 50px;
+	&:hover {
+		padding-top: 0px;
+		padding-bottom: 50px;
+	}
 }
