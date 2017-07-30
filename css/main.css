@@ -475,53 +475,33 @@ h1, h2, h3 {
 
 .section {
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 650px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.section__first-screen {
+  background-image: url(../img/section__first-screen/background.jpg); }
+
+.section__we {
+  background-image: url(../img/section__we/background.jpg); }
+
+.section__burgers {
+  background-image: url(../img/section__burgers/background.jpg); }
+
+.section__team {
+  background-image: url(../img/section__team/background.jpg); }
+
+.section__menu {
+  background-image: url(../img/section__menu/background.jpg); }
+
+.section__form {
+  background-image: url(../img/section__form/background.jpg); }
 
 .container {
   margin: 0 auto;
   width: 940px; }
-
-.section__first-screen {
-  min-height: 650px;
-  background-image: url(../img/section__first-screen/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.section__we {
-  min-height: 650px;
-  background-image: url(../img/section__we/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.section__burgers {
-  min-height: 650px;
-  background-image: url(../img/section__burgers/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.section__team {
-  min-height: 650px;
-  background-image: url(../img/section__team/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.section__menu {
-  min-height: 650px;
-  background-image: url(../img/section__menu/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.section__form {
-  min-height: 650px;
-  background-image: url(../img/section__form/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 .container__first-screen {
   height: 100vh;
@@ -741,3 +721,102 @@ h1, h2, h3 {
   font-weight: 300;
   font-size: 14px;
   color: #686768; }
+
+.section__reviews {
+  background-color: #141414; }
+
+.reviews__list {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.reviews__item {
+  width: 25%;
+  height: 50%; }
+
+.reviews__photo {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .reviews__photo:hover .review__text {
+    opacity: 1; }
+
+.reviews__photo--1 {
+  background-image: url(../img/section__reviews/photo-1.jpg); }
+
+.reviews__photo--2 {
+  background-image: url(../img/section__reviews/photo-2.jpg); }
+
+.reviews__photo--3 {
+  background-image: url(../img/section__reviews/photo-3.jpg); }
+
+.reviews__photo--4 {
+  background-image: url(../img/section__reviews/photo-4.jpg); }
+
+.reviews__photo--5 {
+  background-image: url(../img/section__reviews/photo-5.jpg); }
+
+.reviews__photo--6 {
+  background-image: url(../img/section__reviews/photo-6.jpg); }
+
+.reviews__photo--7 {
+  background-image: url(../img/section__reviews/photo-7.jpg); }
+
+.reviews__photo--8 {
+  background-image: url(../img/section__reviews/photo-8.jpg); }
+
+.review__text {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.review__name {
+  font-family: 'Gagalin';
+  font-size: 14px;
+  margin-bottom: 30px; }
+
+.review__feedback {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.42;
+  margin-bottom: 30px; }
+
+.btn-more__link {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+  padding: 15px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 5px;
+  background-color: #2f3234; }
+  .btn-more__link:hover {
+    background-color: #1f2122; }

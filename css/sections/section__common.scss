@@ -5,6 +5,16 @@
 .section {
 	width: 100%;
 	height: 100vh;
+	min-height: 650px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@each $section in (first-screen, we, burgers, team, menu, form) {
+	.section__#{$section} {
+		background-image: url(../img/section__#{$section}/background.jpg);
+	}
 }
 
 .container {
@@ -12,12 +22,3 @@
 	width: 940px;
 }
 
-@each $section in (first-screen, we, burgers, team, menu, form) {
-	.section__#{$section} {
-		min-height: 650px;
-		background-image: url(../img/section__#{$section}/background.jpg);
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-}
