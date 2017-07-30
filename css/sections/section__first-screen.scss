@@ -1,0 +1,71 @@
+.container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+.header {
+	padding-top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	margin-right: auto;
+}
+
+.header__nav {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.nav__list {
+	display: inline-block;
+}
+
+.nav__item {
+	display: inline-block;
+	&:after {
+		display: inline-block;
+		vertical-align: middle;
+		content: " ";
+		@include circle(5px, #fff);
+		margin: 0 12px;
+	}
+	&:last-child:after {
+		display: none;
+	}
+}
+
+.nav__link {
+	color: #fff;
+	font-family: 'ubuntu';
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.header__order {
+	display: inline-block;
+}
+
+.order__link {
+ 	border-radius: 5px;
+ 	background-color: rgb(228, 80, 40);
+ 	width: 97px;
+ 	height: 35px;
+ 	padding: 10px 17px;
+ 	color: #fff;
+ 	font-family: 'ubuntu';
+ 	font-size: 13px;
+ 	font-weight: 500;
+ 	text-transform: uppercase;
+
+ 	&:hover {
+ 	background-color: rgb(193, 64, 30);
+ 	}
+}

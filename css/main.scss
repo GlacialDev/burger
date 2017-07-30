@@ -1,0 +1,15 @@
+/* common */
+
+@import "common/normalize.scss";
+@import "common/universal.scss";
+@import "config/mixins.scss";
+@import "config/variables.scss";
+
+/* fonts */
+
+@import "common/fonts.scss";
+
+/* sections */
+
+@import "sections/section__common.scss";
+@import "sections/section__first-screen.scss";
