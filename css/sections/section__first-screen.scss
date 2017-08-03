@@ -1,4 +1,4 @@
-.container__first-screen {
+.container--first-screen {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -74,7 +74,7 @@
  	}
 }
 
-.section-first__content {
+.first-screen__content {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
@@ -83,30 +83,30 @@
 	margin-bottom: 100px;
 }
 
-.section-first__image {
+.first-screen__image {
 	display: inline-block;
 }
 
-.section-first__text {
+.first-screen__text {
 	display: inline-block;
 	margin-top: 60px;
 	padding-left: 20px;
 }
 
-.section-first__title {
+.first-screen__title {
 	font-family: 'Gagalin';
 	font-size: 72px;
 	text-transform: uppercase;
 	color: $orange;
 }
 
-.section-first__text-burgers {
+.first-screen__text-burgers {
 	font-family: 'Lifehack';
 	font-size: 65px;
 	color: #fff;
 }
 
-.section-first__arrow {
+.first-screen__arrow {
 	flex-grow: 0;
 	display: flex;
 	justify-content: center;

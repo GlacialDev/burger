@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* common */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -481,29 +482,29 @@ h1, h2, h3 {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.section__first-screen {
+.section--first-screen {
   background-image: url(../img/section__first-screen/background.jpg); }
 
-.section__we {
+.section--we {
   background-image: url(../img/section__we/background.jpg); }
 
-.section__burgers {
+.section--burgers {
   background-image: url(../img/section__burgers/background.jpg); }
 
-.section__team {
+.section--team {
   background-image: url(../img/section__team/background.jpg); }
 
-.section__menu {
+.section--menu {
   background-image: url(../img/section__menu/background.jpg); }
 
-.section__form {
-  background-image: url(../img/section__form/background.jpg); }
+.section--form-screen {
+  background-image: url(../img/section__form-screen/background.jpg); }
 
 .container {
   margin: 0 auto;
   width: 940px; }
 
-.container__first-screen {
+.container--first-screen {
   height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -591,7 +592,7 @@ h1, h2, h3 {
   .order__link:hover {
     background-color: #c1401e; }
 
-.section-first__content {
+.first-screen__content {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -615,26 +616,26 @@ h1, h2, h3 {
   align-items: center;
   margin-bottom: 100px; }
 
-.section-first__image {
+.first-screen__image {
   display: inline-block; }
 
-.section-first__text {
+.first-screen__text {
   display: inline-block;
   margin-top: 60px;
   padding-left: 20px; }
 
-.section-first__title {
+.first-screen__title {
   font-family: 'Gagalin';
   font-size: 72px;
   text-transform: uppercase;
   color: #f9b43b; }
 
-.section-first__text-burgers {
+.first-screen__text-burgers {
   font-family: 'Lifehack';
   font-size: 65px;
   color: #fff; }
 
-.section-first__arrow {
+.first-screen__arrow {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -662,7 +663,7 @@ h1, h2, h3 {
     padding-top: 0px;
     padding-bottom: 50px; }
 
-.container__we {
+.container--we {
   height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -678,7 +679,7 @@ h1, h2, h3 {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.section-we__title {
+.we__title {
   display: block;
   margin: 0 auto;
   margin-bottom: 70px;
@@ -687,7 +688,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: #2f3234; }
 
-.section-we__features {
+.we__features {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -722,7 +723,113 @@ h1, h2, h3 {
   font-size: 14px;
   color: #686768; }
 
-.section__reviews {
+.section--team {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+
+.team__right-half {
+  width: 50%;
+  background-color: #3d4041;
+  opacity: 0.93;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.team__title {
+  display: block;
+  width: 70%;
+  font-family: 'Gagalin';
+  font-size: 72px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  color: #f9b43b; }
+
+.team__list {
+  width: 70%; }
+
+.team__item {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 30px; }
+  .team__item.active .team__member-info {
+    height: auto; }
+  .team__item.active .team__member {
+    color: #f9b43b; }
+    .team__item.active .team__member:before {
+      border-top: none;
+      border-bottom: 5px solid #f9b43b; }
+
+.team__member {
+  font-family: 'Gagalin';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px; }
+  .team__member:before {
+    content: "";
+    margin-right: 10px;
+    border: 5px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: none; }
+
+.team__member-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0;
+  overflow: hidden; }
+
+.team__img {
+  margin-left: 20px;
+  margin-right: 20px;
+  /* эта ересь нужна чтобы картинка не становилась овалом при изменении пропорций экрана */
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/section__team/aphex.jpg); }
+
+.team__role {
+  font-family: 'Ubuntu';
+  font-weight: 900;
+  margin-bottom: 10px; }
+
+.team__text {
+  font-family: 'Ubuntu';
+  font-weight: 300; }
+
+.section--reviews {
   background-color: #141414; }
 
 .reviews__list {

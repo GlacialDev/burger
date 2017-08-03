@@ -1,0 +1,92 @@
+.section--team {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.team__right-half {
+	width: 50%;
+	background-color: #3d4041;
+	opacity: 0.93;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.team__title {
+	display: block;
+	width: 70%;
+	font-family: 'Gagalin';
+	font-size: 72px;
+	text-transform: uppercase;
+	margin-bottom: 70px;
+	color: $orange;
+}
+
+.team__list {
+	width: 70%;
+}
+
+.team__item {
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 30px;
+	&.active {
+		.team__member-info {
+			height: auto;
+		}
+		.team__member {
+			color: $orange;
+			&:before {
+				border-top: none;
+				border-bottom: 5px solid $orange;
+			}
+		}
+	}
+}
+
+.team__member {
+	font-family: 'Gagalin';
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	&:before {
+		content: "";
+		margin-right: 10px;
+		border: 5px solid transparent;
+		border-top-color: $orange;
+		border-bottom: none;
+	}
+}
+
+.team__member-info {
+	display: flex;
+	height: 0;
+	overflow: hidden;
+}
+
+.team__img {
+	margin-left: 20px;
+	margin-right: 20px;
+	/* эта ересь нужна чтобы картинка не становилась овалом при изменении пропорций экрана */
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+	border-radius: 50%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../img/section__team/aphex.jpg);
+}
+
+.team__role {
+	font-family: 'Ubuntu';
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+
+.team__text {
+	font-family: 'Ubuntu';
+	font-weight: 300;
+}

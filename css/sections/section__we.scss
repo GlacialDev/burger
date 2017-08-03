@@ -1,11 +1,11 @@
-.container__we {
+.container--we {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.section-we__title {
+.we__title {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 70px;
@@ -15,7 +15,7 @@
 	color: $dark;
 }
 
-.section-we__features {
+.we__features {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
