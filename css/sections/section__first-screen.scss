@@ -113,7 +113,6 @@
 
 	@include tablets {
 		width: 95%;
-		margin-top: rem(20px);
 		text-align: center;
 		flex-flow: column nowrap;
 	}
@@ -123,12 +122,20 @@
 	display: inline-block;
 	margin-top: 4.25rem;
 
-	@include tab-phones {
-		transform: scale(0.9);
-	}
-
 	@include phones {
 		transform: scale(0.8);
+	}
+
+	@include tab-phones {
+		margin-top: 0rem;
+		transform: scale(0.9);
+	}
+}
+
+.title--burger {
+
+	@include tab-phones {
+		font-size: 3rem;
 	}
 }
 
@@ -140,22 +147,34 @@
 	@include tablets {
 		margin-top: rem(20px);
 	}
+
+	@include tab-phones {
+		margin-top: 0rem;
+	}
 }
 
 .burger__text {
 	font-family: 'Lifehack';
 	font-size: rem(65px);
 	color: #fff;
+
+	@include tab-phones {
+		font-size: 3rem;
+	}
 }
 
 .arrow__link {
 	text-align: center;
 	transition: 0.5s;
-	padding-top: rem(50px);
+	padding-top: rem(20px);
 	margin-bottom: rem(38px);
 	&:hover {
 		padding-top: rem(0px);
-		padding-bottom: rem(50px);
+		padding-bottom: rem(20px);
+	}
+
+	@include tab-phones {
+		margin-bottom: 1rem;
 	}
 }
 
