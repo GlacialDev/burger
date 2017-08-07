@@ -1,0 +1,61 @@
+.section--contacts {
+	display: flex;
+	flex-direction: column;
+}
+
+.map {
+	flex-grow: 1;
+	background-image: url(../img/section__contacts/map.jpg);
+	background-size: cover;
+}
+
+.footer {
+	height: 9vh;
+	background-image: url(../img/section__contacts/footer-texture.jpg);
+	background-size: cover;
+}
+
+.container--footer {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__contacts {
+	font-family: 'ubuntu';
+	font-size: rem(14px);
+	line-height: rem(24px);
+}
+
+.footer__adress {
+	color: #fff;
+	font-weight: 300;
+}
+
+.footer__phone {
+	color: #e45028;
+	font-weight: 900;
+}
+
+.footer__phone-icon {
+	display: inline-block;
+	vertical-align: middle;
+	fill: #e45028;
+	height: rem(14px);
+	width: rem(20px);
+}
+
+.footer__link {
+	display: inline-block;
+	&:hover .social {
+		fill: #fff;
+	}
+}
+
+.social {
+	width: 3vh;
+	height: 3vh;
+	margin-left: rem(15px);
+	fill: #5b5b5b;
+}

@@ -26,6 +26,15 @@
 
 .features__img {
 	height: rem(90px);
+	&--meat {
+	fill: #e25028;
+	}
+	&--hand {
+	fill: #f8b43a;
+	}
+	&--natural {
+	fill: #8ac03e;
+	}
 }
 
 .features__title {

@@ -110,14 +110,15 @@
 	color: #fff;
 }
 
-.arrow {
+/*.arrow {
 	flex-grow: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+}*/
 
 .arrow__link {
+	text-align: center;
 	transition: 0.5s;
 	padding-top: rem(50px);
 	margin-bottom: rem(38px);
@@ -125,4 +126,10 @@
 		padding-top: rem(0px);
 		padding-bottom: rem(50px);
 	}
+}
+
+.arrow__image {
+	width: rem(32px);
+	height: rem(16px);
+	fill: #fff;
 }
