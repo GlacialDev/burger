@@ -27,6 +27,11 @@
 	display: inline-block;
 }
 
+.header__menu {
+	display: flex;
+	align-items: center;
+}
+
 .header__nav {
 	display: inline-block;
 	margin-right: rem(15px);
@@ -34,6 +39,10 @@
 
 .nav__list {
 	display: inline-block;
+
+	@include tablets {
+		display: none;
+	}
 }
 
 .nav__item {
@@ -84,6 +93,15 @@
  	}
 }
 
+.header__hamburger-menu {
+	display: none;
+	margin-left: rem(30px);
+
+	@include tablets {
+		display: inline-block;
+	}
+}
+
 .burger {
 	flex-grow: 1;
 	display: flex;
@@ -92,16 +110,28 @@
 	align-items: center;
 	margin-left: rem(23px);
 	margin-bottom: rem(53px);
+
+	@include tablets {
+		width: 95%;
+		margin-top: rem(20px);
+		text-align: center;
+		flex-flow: column nowrap;
+	}
 }
 
 .burger__image {
 	display: inline-block;
+	margin-top: 4.25rem;
 }
 
 .burger__desc {
 	display: inline-block;
 	margin-top: rem(80px);
 	margin-left: rem(8px);
+
+	@include tablets {
+		margin-top: rem(20px);
+	}
 }
 
 .burger__text {
@@ -109,13 +139,6 @@
 	font-size: rem(65px);
 	color: #fff;
 }
-
-/*.arrow {
-	flex-grow: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}*/
 
 .arrow__link {
 	text-align: center;

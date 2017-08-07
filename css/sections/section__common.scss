@@ -1,3 +1,6 @@
+html {}
+
+
 .wrapper {
 	width: 100%;
 }
@@ -20,6 +23,10 @@
 .container {
 	margin: rem(0px) auto;
 	width: rem(940px);
+
+	@include tablets {
+		width: rem(720px);	
+	}
 }
 
 .title {
