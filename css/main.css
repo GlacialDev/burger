@@ -472,6 +472,14 @@ h1, h2, h3 {
   font-style: normal; }
 
 /* sections */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 13px; } }
+
 .wrapper {
   width: 100%; }
 
