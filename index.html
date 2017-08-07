@@ -12,11 +12,11 @@
 		<section class="section section--first-screen">
 			<div class="container container--first-screen">
 				<header class="header">
-					<div class="header__logo">
+					<div class="logo header__logo">
 						<a href="" class="logo__link"><img src="img/section__first-screen/logo.png" alt="«Burger»"></a>
 					</div>
 					<div class="header__menu">
-						<nav class="header__nav">
+						<nav class="nav header__nav">
 							<ul class="nav__list">
 								<li class="nav__item"><a href="" class="nav__link">О нас</a></li>
 								<li class="nav__item"><a href="" class="nav__link">Бургеры</a></li>
@@ -26,27 +26,27 @@
 								<li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
 							</ul>
 						</nav>
-						<div class="header__order">
+						<div class="order header__order">
 							<a href="#" class="order__link">Заказать</a>
 						</div>
 					</div>
 				</header>
-				<div class="first-screen__content">
-					<div class="first-screen__image"><img src="img/section__first-screen/drops_burger.png" alt=""></div>
-					<div class="first-screen__text">
-						<h2 class="first-screen__title">Мы делаем</h2>
-						<span class="first-screen__text-burgers">натуральные бургеры</span>
+				<div class="burger">
+					<div class="burger__image"><img src="img/section__first-screen/drops_burger.png" alt=""></div>
+					<div class="burger__desc">
+						<h2 class="title title--burger">Мы делаем</h2>
+						<span class="burger__text">натуральные бургеры</span>
 					</div>
 				</div>
-				<div class="first-screen__arrow">
+				<div class="arrow">
 					<a href="" class="arrow__link"><img src="img/section__first-screen/arrow-scroll.png" alt=""></a>
 				</div>
 			</div>
 		</section>
 		<section class="section section--we">
 			<div class="container container--we">
-				<h2 class="we__title">Мы лучшие</h2>
-				<ul class="we__features">
+				<h2 class="title title--we">Мы лучшие</h2>
+				<ul class="features">
 					<li class="features__item">
 						<div class="features__img"><img src="img/section__we/meat.png" alt=""></div>
 						<div class="features__title">100% свежее мясо</div>
@@ -190,8 +190,79 @@
 				</li>
 			</ul>
 		</section>
-		<section class="section section--form-screen"></section>
+		<section class="section section--form-screen">
+			<div class="container container--form-screen">
+				<h2 class="form-screen__title">Закажите доставку</h2>
+				<form action="">
+					<div class="form-screen__form">
+						<div class="form__part">
+							<div class="form__row">
+								<label class="form__block">
+									<div class="form__block-name">Имя</div>
+									<input type="text" class="form__input">
+								</label>
+								<label class="form__block">
+									<div class="form__block-name">Телефон</div>
+									<input type="text" class="form__input">
+								</label>
+							</div>
+							<div class="form__row">
+								<label class="form__block">
+									<div class="form__block-name">Улица</div>
+									<input type="text" class="form__input">
+								</label>
+							</div>
+							<div class="form__row">
+								<label class="form__block">
+									<div class="form__block-name">Дом</div>
+									<input type="text" class="form__input">
+								</label>
+								<label class="form__block">
+									<div class="form__block-name">Корпус</div>
+									<input type="text" class="form__input">
+								</label>
+								<label class="form__block">
+									<div class="form__block-name">Квартира</div>
+									<input type="text" class="form__input">
+								</label>
+								<label class="form__block">
+									<div class="form__block-name">Этаж</div>
+									<input type="text" class="form__input">
+								</label>
+							</div>						
+						</div>
+						<div class="form__part">
+							<div class="form__row">
+								<label class="form__block">
+									<div class="form__block-name">Комментарий</div>
+									<textarea class="form__textarea"></textarea>
+								</label>
+							</div>
+							<div class="form__row form__row--radio">
+								<label class="form__block-radio">
+									<input type="radio" name="pay" class="form__radio-btn">
+									<div class="form__block-name">Потребуется сдача</div>
+								</label>
+								<label class="form__block-radio">
+									<input type="radio" name="pay" class="form__radio-btn">
+									<div class="form__block-name">Оплата по карте</div>
+								</label>
+							</div>
+							<div class="form__row form__row--checkbox">
+								<label class="form__block-checkbox">
+									<input type="checkbox" class="form__checkbox">
+									<div class="form__block-name">Не перезванивать</div>
+								</label>
+							</div>
+								<a href="#" class="order__link">Заказать</a>
+								<a href="#" class="clear__link">Очистить</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
 		<section class="section section--contacts"></section>
 	</div>
 </body>
 </html>
+

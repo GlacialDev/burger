@@ -5,21 +5,19 @@
 	justify-content: center;
 }
 
-.we__title {
+.title--we {
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 70px;
-	font-family: 'Gagalin';
-	font-size: 72px;
-	text-transform: uppercase;
+	margin-bottom: 65px;
 	color: $dark;
 }
 
-.we__features {
+.features {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	text-align: center;
+	margin-bottom: 110px;
 }
 
 .features__item {
@@ -27,7 +25,7 @@
 }
 
 .features__img {
-	height: 100px;
+	height: 90px;
 }
 
 .features__title {
@@ -38,9 +36,10 @@
 }
 
 .features__desc {
-	margin-top: 10px;
+	margin-top: 15px;
 	font-family: 'Ubuntu';
 	font-weight: 300;
 	font-size: 14px;
+	line-height: 24px;
 	color: #686768;
 }
