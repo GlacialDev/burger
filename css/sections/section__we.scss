@@ -10,6 +10,10 @@
 	margin: rem(0px) auto;
 	margin-bottom: rem(65px);
 	color: $dark;
+
+	@include tablets {
+	margin-bottom: 10rem;
+	}
 }
 
 .features {
@@ -18,10 +22,18 @@
 	justify-content: space-between;
 	text-align: center;
 	margin-bottom: rem(110px);
+
+	@include tablets {
+	margin-bottom: 10rem;
+	}
 }
 
 .features__item {
 	width: rem(300px);
+
+	@include tablets {
+	width: 33vw;
+	}
 }
 
 .features__img {
@@ -35,6 +47,11 @@
 	&--natural {
 	fill: #8ac03e;
 	}
+
+	@include tablets {
+	height: 6rem;
+	width: 6rem;
+	}
 }
 
 .features__title {
@@ -42,6 +59,10 @@
 	font-family: 'Lifehack';
 	font-size: rem(24px);
 	color: $dark;
+
+	@include tablets {
+		font-size: rem(18px);
+	}
 }
 
 .features__desc {

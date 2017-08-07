@@ -11,6 +11,10 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .team__title {
@@ -21,16 +25,25 @@
 	text-transform: uppercase;
 	margin-bottom: rem(70px);
 	color: $orange;
+
+	@include tablets {
+		text-align: center;
+	}
 }
 
 .team__list {
 	width: 70%;
+
+	@include tablets {
+		width: 45%;
+		margin-bottom: 9rem;
+	}
 }
 
 .team__item {
 	font-size: rem(14px);
 	color: #fff;
-	margin-bottom: rem(30px);
+	margin-bottom: rem(16px);
 	&.active {
 		.team__member-info {
 			height: auto;
@@ -57,12 +70,23 @@
 		border-top-color: $orange;
 		border-bottom: none;
 	}
+
+	@include tablets {
+		justify-content: center;
+		font-size: rem(24px);
+	}
 }
 
 .team__member-info {
 	display: flex;
 	height: 0;
 	overflow: hidden;
+
+
+	@include tablets {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 .team__img {
@@ -78,6 +102,11 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url(../img/section__team/aphex.jpg);
+
+	@include tablets {
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
 }
 
 .team__role {

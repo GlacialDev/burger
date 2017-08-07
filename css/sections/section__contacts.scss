@@ -6,6 +6,7 @@
 .map {
 	flex-grow: 1;
 	background-image: url(../img/section__contacts/map.jpg);
+	background-position: center center;
 	background-size: cover;
 }
 
@@ -13,6 +14,10 @@
 	height: 9vh;
 	background-image: url(../img/section__contacts/footer-texture.jpg);
 	background-size: cover;
+
+	@include tablets {
+	height: 7vh;
+	}
 }
 
 .container--footer {
@@ -58,4 +63,8 @@
 	height: 3vh;
 	margin-left: rem(15px);
 	fill: #5b5b5b;
+
+	@include tablets {
+	width: 2.5vh;
+	}
 }

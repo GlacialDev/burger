@@ -12,11 +12,23 @@
 	text-transform: uppercase;
 	color: $orange;
 	margin-bottom: rem(70px);
+
+	@media screen and (max-width: 700px) {
+		font-size: rem(60px);
+	}
+
+	@include tab-phones {
+		font-size: 2.75rem;
+	}
 }
 
 .form-screen__form {
 	display: flex;
 	margin-bottom: rem(95px);
+
+	@include tablets {
+		flex-direction: column;
+	}
 }
 
 .form__part {
@@ -24,6 +36,11 @@
 	margin-right: rem(15px);
 	&:last-child {
 		margin-right: rem(0px);
+	}
+
+	@include tablets {
+		margin-right: 0rem;
+		width: 62vw;
 	}
 }
 
@@ -50,6 +67,10 @@
 	margin-right: rem(15px);
 	&:last-child {
 		margin-right: rem(0px);
+	}
+
+	@include tablets {
+		width: 62vw;
 	}
 }
 

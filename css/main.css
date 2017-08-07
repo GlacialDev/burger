@@ -415,7 +415,8 @@ html {
 
 body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 ol, ul, li {
   list-style-type: none; }
@@ -505,7 +506,7 @@ h1, h2, h3 {
   width: 58.75rem; }
   @media screen and (max-width: 768px) {
     .container {
-      width: 45rem; } }
+      width: 95vw; } }
 
 .title {
   font-family: 'Gagalin';
@@ -673,6 +674,16 @@ h1, h2, h3 {
 .burger__image {
   display: inline-block;
   margin-top: 4.25rem; }
+  @media screen and (max-width: 600px) {
+    .burger__image {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9); } }
+  @media screen and (max-width: 480px) {
+    .burger__image {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); } }
 
 .burger__desc {
   display: inline-block;
@@ -724,6 +735,9 @@ h1, h2, h3 {
   margin: 0rem auto;
   margin-bottom: 4.0625rem;
   color: #2f3234; }
+  @media screen and (max-width: 768px) {
+    .title--we {
+      margin-bottom: 10rem; } }
 
 .features {
   display: -webkit-box;
@@ -741,9 +755,15 @@ h1, h2, h3 {
   justify-content: space-between;
   text-align: center;
   margin-bottom: 6.875rem; }
+  @media screen and (max-width: 768px) {
+    .features {
+      margin-bottom: 10rem; } }
 
 .features__item {
   width: 18.75rem; }
+  @media screen and (max-width: 768px) {
+    .features__item {
+      width: 33vw; } }
 
 .features__img {
   height: 5.625rem; }
@@ -753,12 +773,19 @@ h1, h2, h3 {
     fill: #f8b43a; }
   .features__img--natural {
     fill: #8ac03e; }
+  @media screen and (max-width: 768px) {
+    .features__img {
+      height: 6rem;
+      width: 6rem; } }
 
 .features__title {
   margin-top: 1.875rem;
   font-family: 'Lifehack';
   font-size: 1.5rem;
   color: #2f3234; }
+  @media screen and (max-width: 768px) {
+    .features__title {
+      font-size: 1.125rem; } }
 
 .features__desc {
   margin-top: 0.9375rem;
@@ -800,6 +827,9 @@ h1, h2, h3 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .team__right-half {
+      width: 100%; } }
 
 .team__title {
   display: block;
@@ -809,14 +839,21 @@ h1, h2, h3 {
   text-transform: uppercase;
   margin-bottom: 4.375rem;
   color: #f9b43b; }
+  @media screen and (max-width: 768px) {
+    .team__title {
+      text-align: center; } }
 
 .team__list {
   width: 70%; }
+  @media screen and (max-width: 768px) {
+    .team__list {
+      width: 45%;
+      margin-bottom: 9rem; } }
 
 .team__item {
   font-size: 0.875rem;
   color: #fff;
-  margin-bottom: 1.875rem; }
+  margin-bottom: 1rem; }
   .team__item.active .team__member-info {
     height: auto; }
   .team__item.active .team__member {
@@ -842,6 +879,13 @@ h1, h2, h3 {
     border: 0.3125rem solid transparent;
     border-top-color: #f9b43b;
     border-bottom: none; }
+  @media screen and (max-width: 768px) {
+    .team__member {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 1.5rem; } }
 
 .team__member-info {
   display: -webkit-box;
@@ -850,6 +894,14 @@ h1, h2, h3 {
   display: flex;
   height: 0;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .team__member-info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center; } }
 
 .team__img {
   margin-left: 1.25rem;
@@ -864,6 +916,10 @@ h1, h2, h3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/section__team/aphex.jpg); }
+  @media screen and (max-width: 768px) {
+    .team__img {
+      margin: 0 auto;
+      margin-bottom: 1rem; } }
 
 .team__role {
   font-family: 'Ubuntu';
@@ -888,6 +944,13 @@ h1, h2, h3 {
   margin-left: 5.5rem;
   margin-top: 6.125rem;
   color: #fff; }
+  @media screen and (max-width: 768px) {
+    .title--menu {
+      margin-left: 1rem;
+      margin-top: 8rem; } }
+  @media screen and (max-width: 600px) {
+    .title--menu {
+      font-size: 2.5rem; } }
 
 .menu__list {
   display: -webkit-box;
@@ -908,6 +971,9 @@ h1, h2, h3 {
   /* почему-то аккордеон здесь не работает как в прошлом меню... видимо из-за флексов. пришлось вместо width = 0 или opacity 0 делать тут display: none =/ */ }
   .menu__item.active + .menu__desc {
     display: block; }
+  @media screen and (max-width: 768px) {
+    .menu__item {
+      min-width: 10%; } }
 
 .menu__img {
   height: 100%;
@@ -946,10 +1012,13 @@ h1, h2, h3 {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
+  @media screen and (max-width: 768px) {
+    .menu__name {
+      text-align: initial; } }
 
 .menu__desc {
   display: none;
-  width: 33.75rem;
+  max-width: 33.75rem;
   height: 100vh;
   padding: 3.8125rem 2.1875rem 3.8125rem 2.125rem;
   background-color: #2f3234;
@@ -959,6 +1028,14 @@ h1, h2, h3 {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.5rem; }
+  @media screen and (max-width: 768px) {
+    .menu__desc {
+      padding: 0.9375rem;
+      max-width: 43vw; } }
+  @media screen and (max-width: 600px) {
+    .menu__desc {
+      font-size: 0.75rem;
+      line-height: 1.42em; } }
 
 .section--reviews {
   background-color: #141414; }
@@ -977,6 +1054,11 @@ h1, h2, h3 {
 .reviews__item {
   width: 25%;
   height: 50%; }
+  @media screen and (max-width: 768px) {
+    .reviews__item {
+      width: 50%;
+      height: 25%;
+      text-align: center; } }
 
 .reviews__photo {
   width: 100%;
@@ -1035,6 +1117,9 @@ h1, h2, h3 {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
+  @media screen and (max-width: 600px) {
+    .review__text {
+      padding: 0.3125rem; } }
 
 .review__name {
   font-family: 'Gagalin';
@@ -1047,6 +1132,9 @@ h1, h2, h3 {
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin-bottom: 0.625rem; }
+  @media screen and (max-width: 600px) {
+    .review__feedback {
+      line-height: 1.42em; } }
 
 .btn-more__link {
   -webkit-transition: 0.5s;
@@ -1090,6 +1178,12 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: #f9b43b;
   margin-bottom: 4.375rem; }
+  @media screen and (max-width: 700px) {
+    .title--form-screen {
+      font-size: 3.75rem; } }
+  @media screen and (max-width: 600px) {
+    .title--form-screen {
+      font-size: 2.75rem; } }
 
 .form-screen__form {
   display: -webkit-box;
@@ -1097,12 +1191,23 @@ h1, h2, h3 {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 5.9375rem; }
+  @media screen and (max-width: 768px) {
+    .form-screen__form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .form__part {
   width: 28.75rem;
   margin-right: 0.9375rem; }
   .form__part:last-child {
     margin-right: 0rem; }
+  @media screen and (max-width: 768px) {
+    .form__part {
+      margin-right: 0rem;
+      width: 62vw; } }
 
 .form__row {
   display: -webkit-box;
@@ -1139,6 +1244,9 @@ h1, h2, h3 {
   margin-right: 0.9375rem; }
   .form__block:last-child {
     margin-right: 0rem; }
+  @media screen and (max-width: 768px) {
+    .form__block {
+      width: 62vw; } }
 
 .form__block-name {
   display: inline-block;
@@ -1199,12 +1307,16 @@ h1, h2, h3 {
   -ms-flex-positive: 1;
   flex-grow: 1;
   background-image: url(../img/section__contacts/map.jpg);
+  background-position: center center;
   background-size: cover; }
 
 .footer {
   height: 9vh;
   background-image: url(../img/section__contacts/footer-texture.jpg);
   background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .footer {
+      height: 7vh; } }
 
 .container--footer {
   height: 100%;
@@ -1251,3 +1363,6 @@ h1, h2, h3 {
   height: 3vh;
   margin-left: 0.9375rem;
   fill: #5b5b5b; }
+  @media screen and (max-width: 768px) {
+    .social {
+      width: 2.5vh; } }

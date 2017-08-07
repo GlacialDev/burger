@@ -7,6 +7,15 @@
 	margin-left: rem(88px);
     margin-top: rem(98px);
     color: #fff;
+
+    @include tablets {
+		margin-left: 1rem;
+		margin-top: 8rem;
+    }
+
+    @include tab-phones {
+		font-size: 2.5rem;
+	}
 }
 
 .menu__list {
@@ -22,6 +31,10 @@
 	/* почему-то аккордеон здесь не работает как в прошлом меню... видимо из-за флексов. пришлось вместо width = 0 или opacity 0 делать тут display: none =/ */
 	&.active + .menu__desc {
 		display: block;
+	}
+
+	@include tablets {
+		min-width: 10%;
 	}
 }
 
@@ -50,11 +63,15 @@
 	min-width: 100vh;
 	text-align: center;
 	transform: rotate(-90deg);
+
+	@include tablets {
+		text-align: initial;
+	}
 }
 
 .menu__desc {
 	display: none;
-	width: rem(540px);
+	max-width: rem(540px);
 	height: 100vh;
 	padding: rem(61px) rem(35px) rem(61px) rem(34px);
 	background-color: rgb(47, 50, 52);
@@ -64,4 +81,14 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	line-height: rem(24px);
+
+	@include tablets {
+		padding: rem(15px);
+		max-width: 43vw;
+	}
+
+	@include tab-phones {
+		font-size: rem(12px);
+		line-height: 1.42em;
+	}
 }

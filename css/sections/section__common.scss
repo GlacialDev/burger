@@ -1,4 +1,5 @@
-html {}
+html {
+}
 
 
 .wrapper {
@@ -25,7 +26,7 @@ html {}
 	width: rem(940px);
 
 	@include tablets {
-		width: rem(720px);	
+		width: 95vw;	
 	}
 }
 
