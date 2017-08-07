@@ -1,0 +1,66 @@
+.section--menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title--menu {
+	margin-left: 88px;
+    margin-top: 98px;
+    color: #fff;
+}
+
+.menu__list {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.menu__item {
+	width: 7.27vw;
+	height: 100vh;
+	background-color: #141414;
+	overflow: hidden;
+	&.active + .menu__desc {
+		display: block;
+	}
+}
+
+.menu__img {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	opacity: 0.3;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@each $number in (1, 2, 3) {
+	.menu__img--#{$number} {
+		background-image: url(../img/section__menu/photo-#{$number}.jpg);
+	}
+}
+
+.menu__name {
+	font-family: 'Gagalin';
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	min-width: 100vh;
+	text-align: center;
+	transform: rotate(-90deg);
+}
+
+.menu__desc {
+	display: none;
+	width: 49vw;
+	height: 100vh;
+	padding: 61px 35px 61px 34px;
+	background-color: rgb(47, 50, 52);
+	opacity: 0.929;
+	color: #fff;
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+}

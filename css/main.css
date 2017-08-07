@@ -843,6 +843,91 @@ h1, h2, h3 {
   font-family: 'Ubuntu';
   font-weight: 300; }
 
+.section--menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.title--menu {
+  margin-left: 88px;
+  margin-top: 98px;
+  color: #fff; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
+
+.menu__item {
+  width: 7.27vw;
+  height: 100vh;
+  background-color: #141414;
+  overflow: hidden; }
+  .menu__item.active + .menu__desc {
+    display: block; }
+
+.menu__img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  opacity: 0.3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.menu__img--1 {
+  background-image: url(../img/section__menu/photo-1.jpg); }
+
+.menu__img--2 {
+  background-image: url(../img/section__menu/photo-2.jpg); }
+
+.menu__img--3 {
+  background-image: url(../img/section__menu/photo-3.jpg); }
+
+.menu__name {
+  font-family: 'Gagalin';
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  min-width: 100vh;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.menu__desc {
+  display: none;
+  width: 49vw;
+  height: 100vh;
+  padding: 61px 35px 61px 34px;
+  background-color: #2f3234;
+  opacity: 0.929;
+  color: #fff;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px; }
+
 .section--reviews {
   background-color: #141414; }
 
