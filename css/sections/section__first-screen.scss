@@ -12,7 +12,7 @@
 
 .header {
 	flex-grow: 0;
-	padding-top: 10px;
+	padding-top: rem(10px);
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -29,7 +29,7 @@
 
 .header__nav {
 	display: inline-block;
-	margin-right: 15px;
+	margin-right: rem(15px);
 }
 
 .nav__list {
@@ -42,8 +42,8 @@
 		display: inline-block;
 		vertical-align: middle;
 		content: " ";
-		@include circle(5px, #fff);
-		margin: 0 12px;
+		@include circle(rem(5px), #fff);
+		margin: rem(0px) rem(12px);
 	}
 	&:last-child:after {
 		display: none;
@@ -53,7 +53,7 @@
 .nav__link {
 	color: #fff;
 	font-family: 'ubuntu';
-	font-size: 13px;
+	font-size: rem(13px);
 	font-weight: 500;
 	text-transform: uppercase;
 	&:hover {
@@ -68,14 +68,14 @@
 .order__link {
 	display: inline-block;
 	transition: 0.5s;
- 	border-radius: 5px;
+ 	border-radius: rem(5px);
  	background-color: rgb(228, 80, 40);
- 	width: 97px;
- 	height: 35px;
- 	padding: 10px 17px;
+ 	width: rem(97px);
+ 	height: rem(35px);
+ 	padding: rem(10px) rem(17px);
  	color: #fff;
  	font-family: 'ubuntu';
- 	font-size: 13px;
+ 	font-size: rem(13px);
  	font-weight: 500;
  	text-transform: uppercase;
 
@@ -90,8 +90,8 @@
 	justify-content: center;
 	flex-flow: row nowrap;
 	align-items: center;
-	margin-left: 23px;
-	margin-bottom: 53px;
+	margin-left: rem(23px);
+	margin-bottom: rem(53px);
 }
 
 .burger__image {
@@ -100,13 +100,13 @@
 
 .burger__desc {
 	display: inline-block;
-	margin-top: 80px;
-	margin-left: 8px;
+	margin-top: rem(80px);
+	margin-left: rem(8px);
 }
 
 .burger__text {
 	font-family: 'Lifehack';
-	font-size: 65px;
+	font-size: rem(65px);
 	color: #fff;
 }
 
@@ -119,10 +119,10 @@
 
 .arrow__link {
 	transition: 0.5s;
-	padding-top: 50px;
-	margin-bottom: 38px;
+	padding-top: rem(50px);
+	margin-bottom: rem(38px);
 	&:hover {
-		padding-top: 0px;
-		padding-bottom: 50px;
+		padding-top: rem(0px);
+		padding-bottom: rem(50px);
 	}
 }

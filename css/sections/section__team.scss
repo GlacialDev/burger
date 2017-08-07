@@ -17,9 +17,9 @@
 	display: block;
 	width: 70%;
 	font-family: 'Gagalin';
-	font-size: 72px;
+	font-size: rem(72px);
 	text-transform: uppercase;
-	margin-bottom: 70px;
+	margin-bottom: rem(70px);
 	color: $orange;
 }
 
@@ -28,9 +28,9 @@
 }
 
 .team__item {
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #fff;
-	margin-bottom: 30px;
+	margin-bottom: rem(30px);
 	&.active {
 		.team__member-info {
 			height: auto;
@@ -39,7 +39,7 @@
 			color: $orange;
 			&:before {
 				border-top: none;
-				border-bottom: 5px solid $orange;
+				border-bottom: rem(5px) solid $orange;
 			}
 		}
 	}
@@ -49,11 +49,11 @@
 	font-family: 'Gagalin';
 	display: flex;
 	align-items: center;
-	margin-bottom: 15px;
+	margin-bottom: rem(15px);
 	&:before {
 		content: "";
-		margin-right: 10px;
-		border: 5px solid transparent;
+		margin-right: rem(10px);
+		border: rem(5px) solid transparent;
 		border-top-color: $orange;
 		border-bottom: none;
 	}
@@ -66,13 +66,13 @@
 }
 
 .team__img {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: rem(20px);
+	margin-right: rem(20px);
 	/* эта ересь нужна чтобы картинка не становилась овалом при изменении пропорций экрана */
-	min-width: 100px;
-	min-height: 100px;
-	max-width: 100px;
-	max-height: 100px;
+	min-width: rem(100px);
+	min-height: rem(100px);
+	max-width: rem(100px);
+	max-height: rem(100px);
 	border-radius: 50%;
 	background-position: center center;
 	background-size: cover;
@@ -83,7 +83,7 @@
 .team__role {
 	font-family: 'Ubuntu';
 	font-weight: 900;
-	margin-bottom: 10px;
+	margin-bottom: rem(10px);
 }
 
 .team__text {

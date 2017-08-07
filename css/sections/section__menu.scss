@@ -4,8 +4,8 @@
 }
 
 .title--menu {
-	margin-left: 88px;
-    margin-top: 98px;
+	margin-left: rem(88px);
+    margin-top: rem(98px);
     color: #fff;
 }
 
@@ -15,10 +15,11 @@
 }
 
 .menu__item {
-	width: 7.27vw;
+	width: rem(78px);
 	height: 100vh;
 	background-color: #141414;
 	overflow: hidden;
+	/* почему-то аккордеон здесь не работает как в прошлом меню... видимо из-за флексов. пришлось вместо width = 0 или opacity 0 делать тут display: none =/ */
 	&.active + .menu__desc {
 		display: block;
 	}
@@ -43,7 +44,7 @@
 
 .menu__name {
 	font-family: 'Gagalin';
-	font-size: 40px;
+	font-size: rem(40px);
 	text-transform: uppercase;
 	color: #fff;
 	min-width: 100vh;
@@ -53,14 +54,14 @@
 
 .menu__desc {
 	display: none;
-	width: 49vw;
+	width: rem(540px);
 	height: 100vh;
-	padding: 61px 35px 61px 34px;
+	padding: rem(61px) rem(35px) rem(61px) rem(34px);
 	background-color: rgb(47, 50, 52);
 	opacity: 0.929;
 	color: #fff;
 	font-family: 'ubuntu';
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 24px;
+	font-size: rem(14px);
+	line-height: rem(24px);
 }

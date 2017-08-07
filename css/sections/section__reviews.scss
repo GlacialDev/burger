@@ -39,7 +39,7 @@
 	opacity: 0;
 	transition: 0.5s;
 	color: #fff;
-	padding: 20px;
+	padding: rem(20px);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -47,28 +47,28 @@
 
 .review__name {
 	font-family: 'Gagalin';
-	font-size: 14px;
-	margin-top: 20px;
+	font-size: rem(14px);
+	margin-top: rem(20px);
 }
 
 .review__feedback {
 	font-family: 'Ubuntu';
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 24px;
-	margin-bottom: 10px;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	margin-bottom: rem(10px);
 }
 
 .btn-more__link {
 	transition: 0.5s;
 	display: inline-block;
-	padding: 13px 15px;
+	padding: rem(13px) rem(15px);
 	text-align: center;
 	text-transform: uppercase;
 	font-family: 'Ubuntu';
 	font-weight: 700;
-	font-size: 13px;
-	border-radius: 5px;
+	font-size: rem(13px);
+	border-radius: rem(5px);
 	background-color: rgb(47, 50, 52);
 	&:hover {
 		background-color: #1f2122;
