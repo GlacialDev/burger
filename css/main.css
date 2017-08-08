@@ -1273,6 +1273,9 @@ h1, h2, h3 {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .form-screen__form {
+      margin-bottom: 0; } }
 
 .form__part {
   width: 28.75rem;
