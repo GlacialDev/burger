@@ -38,6 +38,10 @@
 		width: 45%;
 		margin-bottom: 9rem;
 	}
+
+	@include phones {
+		margin-bottom: 0;
+	}
 }
 
 .team__item {

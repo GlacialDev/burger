@@ -909,6 +909,9 @@ h1, h2, h3 {
     .team__list {
       width: 45%;
       margin-bottom: 9rem; } }
+  @media screen and (max-width: 480px) {
+    .team__list {
+      margin-bottom: 0; } }
 
 .team__item {
   font-size: 0.875rem;
