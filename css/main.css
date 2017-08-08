@@ -1256,6 +1256,9 @@ h1, h2, h3 {
   @media screen and (max-width: 600px) {
     .title--form-screen {
       font-size: 2.75rem; } }
+  @media screen and (max-width: 480px) {
+    .title--form-screen {
+      margin-bottom: 0rem; } }
 
 .form-screen__form {
   display: -webkit-box;
