@@ -18,6 +18,10 @@
 	@include tablets {
 	height: 7vh;
 	}
+
+	@include phones {
+	height: 12vh;
+	}
 }
 
 .container--footer {
@@ -25,6 +29,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include phones {
+		flex-direction: column;
+		justify-content: space-around;
+		text-align: center;
+	}
 }
 
 .footer__contacts {

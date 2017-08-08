@@ -96,6 +96,7 @@
 .header__hamburger-menu {
 	display: none;
 	margin-left: rem(30px);
+	padding-right: 10px;
 
 	@include tablets {
 		display: inline-block;
@@ -116,6 +117,10 @@
 		text-align: center;
 		flex-flow: column nowrap;
 	}
+
+	@include tab-phones {
+		margin: 0;
+	}
 }
 
 .burger__image {
@@ -129,6 +134,10 @@
 	@include tab-phones {
 		margin-top: 0rem;
 		transform: scale(0.9);
+	}
+
+	@include phones {
+		transform: scale(0.8);
 	}
 }
 

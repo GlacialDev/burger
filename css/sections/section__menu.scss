@@ -21,6 +21,10 @@
 .menu__list {
 	display: flex;
 	flex-flow: row nowrap;
+
+	@include tablets {
+		flex-grow: 1;
+	}
 }
 
 .menu__item {
@@ -36,7 +40,18 @@
 	@include tablets {
 		min-width: 10%;
 	}
+
+	@include phones {
+		&.active ~ & {
+			display: none;
+		}
+
+		&.active .menu__name {
+			color: #f9b43b;
+		}
+	}
 }
+
 
 .menu__img {
 	height: 100%;
@@ -84,11 +99,7 @@
 
 	@include tablets {
 		padding: rem(15px);
-		max-width: 43vw;
-	}
-
-	@include tab-phones {
-		font-size: rem(12px);
-		line-height: 1.42em;
+		flex-grow: 1;
+		max-width: initial;
 	}
 }

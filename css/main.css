@@ -639,7 +639,8 @@ h1, h2, h3 {
 
 .header__hamburger-menu {
   display: none;
-  margin-left: 1.875rem; }
+  margin-left: 1.875rem;
+  padding-right: 10px; }
   @media screen and (max-width: 768px) {
     .header__hamburger-menu {
       display: inline-block; } }
@@ -677,6 +678,9 @@ h1, h2, h3 {
       -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
       flex-flow: column nowrap; } }
+  @media screen and (max-width: 600px) {
+    .burger {
+      margin: 0; } }
 
 .burger__image {
   display: inline-block;
@@ -692,6 +696,11 @@ h1, h2, h3 {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
       transform: scale(0.9); } }
+  @media screen and (max-width: 480px) {
+    .burger__image {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); } }
 
 @media screen and (max-width: 600px) {
   .title--burger {
@@ -753,12 +762,16 @@ h1, h2, h3 {
 
 .title--we {
   display: block;
+  text-align: center;
   margin: 0rem auto;
   margin-bottom: 4.0625rem;
   color: #2f3234; }
   @media screen and (max-width: 768px) {
     .title--we {
       margin-bottom: 10rem; } }
+  @media screen and (max-width: 768px) {
+    .title--we {
+      margin-bottom: 0; } }
 
 .features {
   display: -webkit-box;
@@ -779,12 +792,31 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .features {
       margin-bottom: 10rem; } }
+  @media screen and (max-width: 480px) {
+    .features {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+      margin-bottom: 0; } }
 
 .features__item {
   width: 18.75rem; }
   @media screen and (max-width: 768px) {
     .features__item {
       width: 33vw; } }
+  @media screen and (max-width: 480px) {
+    .features__item {
+      width: 95vw;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .features__img {
   height: 5.625rem; }
@@ -798,6 +830,13 @@ h1, h2, h3 {
     .features__img {
       height: 6rem;
       width: 6rem; } }
+  @media screen and (max-width: 480px) {
+    .features__img {
+      min-width: 12rem; } }
+
+@media screen and (max-width: 480px) {
+  .features__text {
+    text-align: initial; } }
 
 .features__title {
   margin-top: 1.875rem;
@@ -983,6 +1022,12 @@ h1, h2, h3 {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap; }
+  @media screen and (max-width: 768px) {
+    .menu__list {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; } }
 
 .menu__item {
   width: 4.875rem;
@@ -995,6 +1040,11 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .menu__item {
       min-width: 10%; } }
+  @media screen and (max-width: 480px) {
+    .menu__item.active ~ .menu__item {
+      display: none; }
+    .menu__item.active .menu__name {
+      color: #f9b43b; } }
 
 .menu__img {
   height: 100%;
@@ -1052,11 +1102,11 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .menu__desc {
       padding: 0.9375rem;
-      max-width: 43vw; } }
-  @media screen and (max-width: 600px) {
-    .menu__desc {
-      font-size: 0.75rem;
-      line-height: 1.42em; } }
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: initial; } }
 
 .section--reviews {
   background-color: #141414; }
@@ -1194,6 +1244,7 @@ h1, h2, h3 {
   flex-direction: column; }
 
 .title--form-screen {
+  text-align: center;
   font-family: 'Gagalin';
   font-size: 4.5rem;
   text-transform: uppercase;
@@ -1229,6 +1280,9 @@ h1, h2, h3 {
     .form__part {
       margin-right: 0rem;
       width: 62vw; } }
+  @media screen and (max-width: 480px) {
+    .form__part {
+      width: 90vw; } }
 
 .form__row {
   display: -webkit-box;
@@ -1247,8 +1301,17 @@ h1, h2, h3 {
   /* к моменту верстки текстареа, радио и чекбоксов я так намучился с флексами, что отчаялся и принялся верстать блоками... */ }
   .form__row--radio {
     display: block; }
+    @media screen and (max-width: 480px) {
+      .form__row--radio {
+        text-align: center; } }
   .form__row--checkbox {
     display: block; }
+    @media screen and (max-width: 480px) {
+      .form__row--checkbox {
+        text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .form__row {
+      margin-bottom: 2rem; } }
 
 .form__block {
   min-width: 0rem;
@@ -1268,6 +1331,12 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .form__block {
       width: 62vw; } }
+  @media screen and (max-width: 480px) {
+    .form__block {
+      width: 90vw; } }
+  @media screen and (max-width: 480px) {
+    .form__block--no-phone {
+      display: none; } }
 
 .form__block-name {
   display: inline-block;
@@ -1297,7 +1366,7 @@ h1, h2, h3 {
   padding: 0.625rem;
   border: 0.0625rem solid #d1cfcb;
   border-radius: 0.3125rem;
-  min-height: 6.6875rem; }
+  min-height: 7.5rem; }
 
 .form__block-radio {
   margin-right: 0.9375rem; }
@@ -1310,6 +1379,21 @@ h1, h2, h3 {
   color: #fff; }
   .clear__link:hover {
     text-decoration: underline; }
+
+@media screen and (max-width: 480px) {
+  .form__btns-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; } }
 
 .section--contacts {
   display: -webkit-box;
@@ -1338,6 +1422,9 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .footer {
       height: 7vh; } }
+  @media screen and (max-width: 480px) {
+    .footer {
+      height: 12vh; } }
 
 .container--footer {
   height: 100%;
@@ -1353,6 +1440,17 @@ h1, h2, h3 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .container--footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      text-align: center; } }
 
 .footer__contacts {
   font-family: 'ubuntu';

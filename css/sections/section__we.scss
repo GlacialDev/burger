@@ -7,12 +7,17 @@
 
 .title--we {
 	display: block;
+	text-align: center;
 	margin: rem(0px) auto;
 	margin-bottom: rem(65px);
 	color: $dark;
 
 	@include tablets {
 	margin-bottom: 10rem;
+	}
+
+	@include tablets {
+	margin-bottom: 0;
 	}
 }
 
@@ -26,6 +31,11 @@
 	@include tablets {
 	margin-bottom: 10rem;
 	}
+
+	@include phones {
+	flex-flow: column wrap;
+	margin-bottom: 0;
+	}
 }
 
 .features__item {
@@ -33,6 +43,12 @@
 
 	@include tablets {
 	width: 33vw;
+	}
+
+	@include phones {
+	width: 95vw;
+	display: flex;
+	align-items: center;
 	}
 }
 
@@ -51,6 +67,16 @@
 	@include tablets {
 	height: 6rem;
 	width: 6rem;
+	}
+
+	@include phones {
+	min-width: 12rem;
+	}
+}
+
+.features__text {
+	@include phones {
+		text-align: initial;
 	}
 }
 
