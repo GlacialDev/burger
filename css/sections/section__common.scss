@@ -22,7 +22,7 @@ html {
 	background-repeat: no-repeat;
 }
 
-@each $section in (first-screen, we, burgers, team, menu, form-screen) {
+@each $section in (first-screen, we, team, menu, form-screen) {
 	.section--#{$section} {
 		background-image: url(../img/section__#{$section}/background.jpg);
 	}

@@ -1,0 +1,149 @@
+.section--burgers {
+	background: #f9b33b; /* Old browsers */
+	background: -moz-linear-gradient(top, #f9b33b 0%, #eb8d38 50%, #f9b33b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #f9b33b 0%,#eb8d38 50%,#f9b33b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #f9b33b 0%,#eb8d38 50%,#f9b33b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider-scroll {
+	height: 72%;
+	display: flex;
+	align-items: center;
+}
+
+.slider {
+	height: 74%;
+	width: 88%;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.slider__img {
+	height: 100%;
+	width: 51%;
+	background-image: url(../img/section__burgers/burger.png);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.slider__composition-btn {
+	margin-left: 10px;
+	margin-top: 6px;
+	transition: 0.5s;
+	border-radius: 5px;
+	background-color: rgba(227, 80, 40, 0.4);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 90px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background-color: rgba(227, 80, 40, 1);
+	}
+}
+
+.slider__calories-img {
+	text-align: center;
+	height: 80px;
+	width: 80px;
+	opacity: 0.4;
+	position: absolute;
+	top: 0.9;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.slider__btn-img {
+	height: 45px;
+	width: 45px;
+	fill: #fff;
+
+	&--kkal {
+		height: 60px;
+		width: 80px;
+	}
+}
+
+.slider__btn-text {
+	font-family: 'gagalin';
+	font-size: 14px;
+	color: #fff;
+}
+
+.slider__calories-text, .slider__img-text {
+	font-family: 'gagalin';
+	font-size: 14px;
+	color: #fff;
+}
+
+.slider__img-text {
+	font-size: 18px;
+	margin-top: -50px;
+}
+
+.slider__text {
+	height: 100%;
+	width: 49%;
+}
+
+.slider__title {
+	color: #fff;
+	line-height: rem(64px);
+}
+
+.slider__desc {
+	margin-top: 35px;
+	font-family: 'ubuntu';
+	font-weight: 300;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	color: #fff;
+}
+
+.slider__order-block {
+}
+
+.slider__price {
+	display: inline-block;
+	font-family: 'gagalin';
+	color: #e35028;
+	font-size: rem(72px);
+	&-text {
+		font-size: rem(30px);
+	}
+}
+
+.slider__order-block {
+	margin-top: rem(20px);
+}
+
+.slider__order {
+	margin-left: rem(20px);
+	vertical-align: super;
+	display: inline-block;
+}
+
+.arrow--left {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+
+.arrow--right {
+	display: inline-block;
+	transform: rotate(-90deg);
+}
+
