@@ -45,14 +45,14 @@
 	position: relative;
 
 	@include tablets {
-		margin-top: 106px;
+		margin-top: rem(106px);
 		width: 78%;
 	}
 
 	@include phones {
-		margin-top: 46px;
-		margin-left: 80px;
-		margin-right: 80px;
+		margin-top: rem(46px);
+		margin-left: rem(80px);
+		margin-right: rem(80px);
 		width: 115%;
 	}
 
@@ -62,7 +62,7 @@
 }
 
 .slider__composition-btn {
-	margin-top: 6px;
+	margin-top: rem(6px);
 	transition: 0.5s;
 	border-radius: 5px;
 	background-color: rgba(227, 80, 40, 0.4);
@@ -71,8 +71,8 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 90px;
-	height: 90px;
+	width: rem(90px);
+	height: rem(90px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -80,6 +80,66 @@
 	&:hover {
 		background-color: rgba(227, 80, 40, 1);
 	}
+}
+
+.slider__composition-btn:hover + .composition {
+	display: block;
+}
+
+.composition {
+	display: none;
+	margin-top: rem(6px);
+	border-radius: 5px;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.902;
+	width: rem(270px);
+	position: absolute;
+	left: rem(90px);
+
+	@include tablets {
+		width: 70%;
+	}
+}
+
+.composition__list {
+	padding: rem(20px);
+}
+
+.composition__img, .composition__name, .composition__weight {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.composition__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.composition__icon {
+	width: rem(50px);
+	height: rem(50px);
+	&--red {
+		fill: #e25028;
+	}
+	&--yellow {
+		fill: #f8b43a;
+	}
+	&--green {
+		fill: #8ac03e;
+	}
+}
+
+.composition__weight {
+	font-size: rem(14px);
+}
+
+.composition__name {
+	margin-left: rem(20px);
+	flex-grow: 1;
+	font-family: 'ubuntu';
+	font-weight: 500;
+	font-size: rem(14px);
 }
 
 .slider__calories-img {
@@ -153,7 +213,7 @@
 	}
 
 	@include phones {
-		margin-top: 46px;
+		margin-top: rem(46px);
 		width: 95%;
 	}
 
