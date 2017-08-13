@@ -74,7 +74,9 @@
 	display: inline-block;
 }
 
-.order__link {
+.order__btn{
+	cursor: pointer;
+	border: 0;
 	display: inline-block;
 	transition: 0.5s;
  	border-radius: rem(5px);

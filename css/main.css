@@ -616,7 +616,9 @@ h1, h2, h3 {
 .header__order {
   display: inline-block; }
 
-.order__link {
+.order__btn {
+  cursor: pointer;
+  border: 0;
   display: inline-block;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -631,7 +633,7 @@ h1, h2, h3 {
   font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase; }
-  .order__link:hover {
+  .order__btn:hover {
     background-color: #c1401e; }
 
 .header__hamburger-link {
@@ -1204,25 +1206,27 @@ h1, h2, h3 {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  align-items: center; }
   @media screen and (max-width: 768px) {
     .team {
-      width: 100%; } }
+      width: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .team__title {
+  margin-top: 4.6875rem;
   display: block;
   width: 70%;
   font-family: 'Gagalin';
   font-size: 4.5rem;
   text-transform: uppercase;
-  margin-bottom: 4.375rem;
+  margin-bottom: 5.375rem;
   color: #f9b43b; }
   @media screen and (max-width: 768px) {
     .team__title {
+      margin-bottom: 4.375rem;
       text-align: center; } }
 
 .team__list {
@@ -1325,6 +1329,13 @@ h1, h2, h3 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .section--menu {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: relative; } }
 
 .title--menu {
   margin-left: 5.5rem;
@@ -1332,6 +1343,11 @@ h1, h2, h3 {
   color: #fff; }
   @media screen and (max-width: 768px) {
     .title--menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       margin-left: 1rem;
       margin-top: 8rem; } }
   @media screen and (max-width: 600px) {
@@ -1356,22 +1372,40 @@ h1, h2, h3 {
       flex-grow: 1; } }
 
 .menu__item {
-  width: 4.875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  position: relative;
   height: 100vh;
   background-color: #141414;
   overflow: hidden; }
-  .menu__item.active + .menu__desc {
+  .menu__item.active > .menu__desc {
     display: block; }
   @media screen and (max-width: 768px) {
     .menu__item {
-      min-width: 10%; } }
+      min-width: 8%; } }
   @media screen and (max-width: 480px) {
     .menu__item.active ~ .menu__item {
       display: none; }
     .menu__item.active .menu__name {
       color: #f9b43b; } }
+  .menu__item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 20, 20, 0.7); }
 
 .menu__img {
+  max-width: 4.875rem;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -1671,6 +1705,63 @@ h1, h2, h3 {
     .form__block--no-phone {
       display: none; } }
 
+.form__radio-btn {
+  display: none; }
+
+.form__radio-btn:checked + .form__radio-fake:after {
+  display: block; }
+
+.form__radio-fake {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #cbcbcb;
+  position: relative;
+  background: -webkit-linear-gradient(top, #fdfdfd 0%, #efefef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#efefef));
+  background: -o-linear-gradient(top, #fdfdfd 0%, #efefef 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%, #efefef 100%); }
+
+.form__radio-fake:after {
+  content: "";
+  display: none;
+  width: 7px;
+  height: 7px;
+  background-color: #e35028;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px; }
+
+.form__checkbox {
+  display: none; }
+
+.form__checkbox:checked + .form__checkbox-fake:after {
+  display: block; }
+
+.form__checkbox-fake {
+  background: white;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  position: relative; }
+
+.form__checkbox-fake:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../img/section__form/checkmark.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .form__block-name {
   display: inline-block;
   font-family: 'Ubuntu';
@@ -1707,10 +1798,13 @@ h1, h2, h3 {
 .form__radio-btn, .form__checkbox {
   margin-right: 0.625rem; }
 
-.clear__link {
+.clear__btn {
+  cursor: pointer;
   margin-left: 1.25rem;
-  color: #fff; }
-  .clear__link:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 0; }
+  .clear__btn:hover {
     text-decoration: underline; }
 
 @media screen and (max-width: 480px) {

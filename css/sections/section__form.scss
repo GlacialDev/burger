@@ -110,6 +110,66 @@
 	}
 }
 
+.form__radio-btn {
+	display: none;
+}
+
+.form__radio-btn:checked + .form__radio-fake:after {
+	display: block;
+}
+
+.form__radio-fake {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	border-radius: 50%;
+	border: 1px solid #cbcbcb;
+	position: relative;
+	background: -webkit-linear-gradient(top, #fdfdfd 0%,#efefef 100%); 
+	background: linear-gradient(to bottom, #fdfdfd 0%,#efefef 100%); 
+}
+
+.form__radio-fake:after {
+	content: "";
+	display: none;
+	width: 7px;
+	height: 7px;
+	background-color: #e35028;
+	border-radius: 50%;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+
+.form__checkbox {
+	display: none;
+}
+
+.form__checkbox:checked + .form__checkbox-fake:after {
+	display: block;
+}
+
+.form__checkbox-fake {
+	background: rgb(255, 255, 255);
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 1px;
+	position: relative;
+}
+
+.form__checkbox-fake:after {
+	content: "";
+	display: none;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 0; right: 0; left: 0; bottom: 0;
+	background: url(../img/section__form/checkmark.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 .form__block-name {
 	display: inline-block;
 	font-family: 'Ubuntu';
@@ -145,9 +205,12 @@
 	margin-right: rem(10px);
 }
 
-.clear__link {
+.clear__btn {
+	cursor: pointer;
 	margin-left: rem(20px);
 	color: #fff;
+	background-color: transparent;
+	border: 0;
 	&:hover {
 		text-decoration: underline;
 	}
