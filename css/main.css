@@ -503,8 +503,8 @@ h1, h2, h3 {
 .section--menu {
   background-image: url(../img/section__menu/background.jpg); }
 
-.section--form-screen {
-  background-image: url(../img/section__form-screen/background.jpg); }
+.section--form {
+  background-image: url(../img/section__form/background.jpg); }
 
 .container {
   margin: 0rem auto;
@@ -634,13 +634,46 @@ h1, h2, h3 {
   .order__link:hover {
     background-color: #c1401e; }
 
+.header__hamburger-link {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
 .header__hamburger-menu {
   display: none;
   margin-left: 1.875rem;
-  padding-right: 10px; }
+  padding-right: 10px;
+  margin-right: 12px; }
   @media screen and (max-width: 768px) {
     .header__hamburger-menu {
-      display: inline-block; } }
+      display: block; } }
+
+/* отрисовка гамбургер-меню через css */
+.header__hamburger-menu {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  width: 25px;
+  position: relative;
+  background-color: currentColor; }
+
+.header__hamburger-menu:before {
+  content: '';
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  width: 25px;
+  top: -10px;
+  margin: -2px;
+  background-color: currentColor; }
+
+.header__hamburger-menu:after {
+  content: '';
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  width: 25px;
+  top: 10px;
+  margin: -2px;
+  background-color: currentColor; }
 
 .burger {
   -webkit-box-flex: 1;
@@ -1155,7 +1188,7 @@ h1, h2, h3 {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse; }
 
-.team__right-half {
+.team {
   width: 49%;
   background-color: #3d4041;
   opacity: 0.93;
@@ -1177,7 +1210,7 @@ h1, h2, h3 {
   -ms-flex-pack: center;
   justify-content: center; }
   @media screen and (max-width: 768px) {
-    .team__right-half {
+    .team {
       width: 100%; } }
 
 .team__title {
@@ -1326,8 +1359,7 @@ h1, h2, h3 {
   width: 4.875rem;
   height: 100vh;
   background-color: #141414;
-  overflow: hidden;
-  /* почему-то аккордеон здесь не работает как в прошлом меню... видимо из-за флексов. пришлось вместо width = 0 или opacity 0 делать тут display: none =/ */ }
+  overflow: hidden; }
   .menu__item.active + .menu__desc {
     display: block; }
   @media screen and (max-width: 768px) {
@@ -1343,7 +1375,6 @@ h1, h2, h3 {
   height: 100%;
   width: 100%;
   background-size: cover;
-  opacity: 0.3;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1433,7 +1464,7 @@ h1, h2, h3 {
   background-size: cover;
   background-repeat: no-repeat; }
   .reviews__photo:hover .review__text {
-    opacity: 0.7; }
+    opacity: 1; }
 
 .reviews__photo--1 {
   background-image: url(../img/section__reviews/photo-1.jpg); }
@@ -1460,7 +1491,7 @@ h1, h2, h3 {
   background-image: url(../img/section__reviews/photo-8.jpg); }
 
 .review__text {
-  background-color: #141414;
+  background-color: rgba(20, 20, 20, 0.7);
   height: 100%;
   overflow: hidden;
   opacity: 0;
@@ -1499,6 +1530,9 @@ h1, h2, h3 {
   @media screen and (max-width: 600px) {
     .review__feedback {
       line-height: 1.42em; } }
+  @media screen and (max-width: 480px) {
+    .review__feedback {
+      display: none; } }
 
 .btn-more__link {
   -webkit-transition: 0.5s;
@@ -1516,7 +1550,7 @@ h1, h2, h3 {
   .btn-more__link:hover {
     background-color: #1f2122; }
 
-.container--form-screen {
+.container--form {
   height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1536,7 +1570,7 @@ h1, h2, h3 {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.title--form-screen {
+.title--form {
   text-align: center;
   font-family: 'Gagalin';
   font-size: 4.5rem;
@@ -1544,30 +1578,30 @@ h1, h2, h3 {
   color: #f9b43b;
   margin-bottom: 4.375rem; }
   @media screen and (max-width: 700px) {
-    .title--form-screen {
+    .title--form {
       font-size: 3.75rem; } }
   @media screen and (max-width: 600px) {
-    .title--form-screen {
+    .title--form {
       font-size: 2.75rem; } }
   @media screen and (max-width: 480px) {
-    .title--form-screen {
+    .title--form {
       margin-bottom: 0rem; } }
 
-.form-screen__form {
+.form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 5.9375rem; }
   @media screen and (max-width: 768px) {
-    .form-screen__form {
+    .form {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
   @media screen and (max-width: 480px) {
-    .form-screen__form {
+    .form {
       margin-bottom: 0; } }
 
 .form__part {
