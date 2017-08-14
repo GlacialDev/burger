@@ -163,11 +163,7 @@
 .burger__image {
 	display: inline-block;
 	margin-top: 4.25rem;
-
-	@include phones {
-		transform: scale(0.8);
-	}
-
+	
 	@include tab-phones {
 		margin-top: 0rem;
 		transform: scale(0.9);
