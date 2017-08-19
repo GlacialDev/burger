@@ -13,7 +13,7 @@
 
 	@include tablets {
 		width: 100%;
-		justify-content: center;
+		/*justify-content: center;*/
 	}
 }
 
@@ -28,7 +28,8 @@
 	color: $orange;
 
 	@include tablets {
-		margin-bottom: rem(70px);
+		margin-top: rem(120px);
+		margin-bottom: rem(140px);
 		text-align: center;
 	}
 }
@@ -53,7 +54,7 @@
 	margin-bottom: rem(16px);
 	&.active {
 		.team__member-info {
-			height: auto;
+
 		}
 		.team__member {
 			color: $orange;
@@ -84,11 +85,16 @@
 	}
 }
 
-.team__member-info {
-	display: flex;
+.team__member-wrap {
+	transition: 0.5s;
 	height: 0;
 	overflow: hidden;
+}
 
+.team__member-info {
+	transition: 0.5s;
+	display: flex;
+	overflow: hidden;
 
 	@include tablets {
 		flex-direction: column;

@@ -38,6 +38,7 @@
 }
 
 .menu__item {
+	transition: 0.5s;
 	display: flex;
 	flex-flow: row nowrap;
 	position: relative;
@@ -106,6 +107,7 @@
 }
 
 .menu__desc {
+	transition: 0.5s;
 	display: none;
 	max-width: rem(540px);
 	height: 100vh;

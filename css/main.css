@@ -1343,10 +1343,7 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .team {
       width: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
+      /*justify-content: center;*/ } }
 
 .team__title {
   margin-top: 4.6875rem;
@@ -1359,7 +1356,8 @@ h1, h2, h3 {
   color: #f9b43b; }
   @media screen and (max-width: 768px) {
     .team__title {
-      margin-bottom: 4.375rem;
+      margin-top: 7.5rem;
+      margin-bottom: 8.75rem;
       text-align: center; } }
 
 .team__list {
@@ -1377,8 +1375,6 @@ h1, h2, h3 {
   font-size: 0.875rem;
   color: #fff;
   margin-bottom: 1rem; }
-  .team__item.active .team__member-info {
-    height: auto; }
   .team__item.active .team__member {
     color: #f9b43b; }
     .team__item.active .team__member:before {
@@ -1410,12 +1406,21 @@ h1, h2, h3 {
       justify-content: center;
       font-size: 1.5rem; } }
 
+.team__member-wrap {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  height: 0;
+  overflow: hidden; }
+
 .team__member-info {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 0;
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .team__member-info {
@@ -1505,6 +1510,9 @@ h1, h2, h3 {
       flex-grow: 1; } }
 
 .menu__item {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1579,6 +1587,9 @@ h1, h2, h3 {
       text-align: initial; } }
 
 .menu__desc {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   display: none;
   max-width: 33.75rem;
   height: 100vh;
