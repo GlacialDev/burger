@@ -30,11 +30,8 @@ html {
 
 .container {
 	margin: rem(0px) auto;
-	width: rem(940px);
-
-	@include tablets {
-		width: 95vw;	
-	}
+	max-width: 58.75rem;
+	width: 95%;
 }
 
 .title {

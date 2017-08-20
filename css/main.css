@@ -508,10 +508,8 @@ h1, h2, h3 {
 
 .container {
   margin: 0rem auto;
-  width: 58.75rem; }
-  @media screen and (max-width: 768px) {
-    .container {
-      width: 95vw; } }
+  max-width: 58.75rem;
+  width: 95%; }
 
 .title {
   font-family: 'Gagalin';
@@ -1745,7 +1743,11 @@ h1, h2, h3 {
     .title--form {
       margin-bottom: 0rem; } }
 
+form {
+  width: 100%; }
+
 .form {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1763,14 +1765,20 @@ h1, h2, h3 {
       margin-bottom: 0; } }
 
 .form__part {
-  width: 28.75rem;
+  width: 50%;
   margin-right: 0.9375rem; }
   .form__part:last-child {
     margin-right: 0rem; }
+    @media screen and (max-width: 768px) {
+      .form__part:last-child {
+        margin: 0 auto; } }
   @media screen and (max-width: 768px) {
     .form__part {
-      margin-right: 0rem;
+      margin: 0 auto;
       width: 62vw; } }
+  @media screen and (max-width: 600px) {
+    .form__part {
+      width: 80vw; } }
   @media screen and (max-width: 480px) {
     .form__part {
       width: 90vw; } }
@@ -1806,7 +1814,7 @@ h1, h2, h3 {
 
 .form__block {
   min-width: 0rem;
-  width: 28.75rem;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1822,9 +1830,14 @@ h1, h2, h3 {
   @media screen and (max-width: 768px) {
     .form__block {
       width: 62vw; } }
+  @media screen and (max-width: 600px) {
+    .form__block {
+      width: 80vw; } }
   @media screen and (max-width: 480px) {
     .form__block {
-      width: 90vw; } }
+      width: 90vw; }
+      .form__block:nth-child(n+3) {
+        margin-right: 0rem; } }
   @media screen and (max-width: 480px) {
     .form__block--no-phone {
       display: none; } }
