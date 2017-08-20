@@ -6,6 +6,7 @@
 }
 
 .container--burgers {
+	position: relative;
 	width: initial;
 	max-width: rem(1100px);
 	height: 100%;
@@ -15,54 +16,70 @@
 }
 
 .slider-scroll {
-	height: 72%;
+	position: absolute;
+	justify-content: space-between;
 	display: flex;
+	width: 100%;
+}
+
+.slider__list {
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
-.slider {
-	height: 74%;
-	width: 86%;
+.slider__item {
+	position: relative;
+	width: 90%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
 
 	@include tablets {
-		width: 82%;
-		height: 100%;
 		flex-direction: column;
 	}
 }
 
-.slider__img {
+.slider__img-wrap {
+	left: 0;
+	position: absolute;
 	height: 100%;
-	width: 51%;
-	background-image: url(../img/section__burgers/burger.png);
-	background-position: center center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: relative;
+	width: 0%;
 
 	@include tablets {
-		margin-top: rem(106px);
-		width: 78%;
+		left: initial;
+		width: 62%;
+		height: 0%;
+		top: 0;
+	}
+
+	@include tab-phones {
+		width: 80%;	
 	}
 
 	@include phones {
-		margin-top: rem(46px);
-		margin-left: rem(80px);
-		margin-right: rem(80px);
-		width: 115%;
+		width: 100%;
+	}
+}
+
+.slider__img {	
+	text-align: center;
+
+	& > img {
+		width: 100%;
 	}
 
-	@media screen and (max-width: 400px) {
-		margin-top: 0;
+	@include tablets {
+		width: 62%;
+	}
+
+	@include tab-phones {
+		width: 80%;	
 	}
 }
 
 .slider__composition-btn {
-	margin-top: rem(6px);
 	transition: 0.5s;
 	border-radius: 5px;
 	background-color: rgba(227, 80, 40, 0.4);
@@ -87,13 +104,16 @@
 }
 
 .composition {
+	height: max-content;
 	display: none;
-	margin-top: rem(6px);
 	border-radius: 5px;
 	background-color: rgb(255, 255, 255);
 	opacity: 0.902;
 	width: rem(270px);
 	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	left: rem(90px);
 
 	@include tablets {
@@ -148,30 +168,14 @@
 	width: 4rem;
 	opacity: 0.4;
 	position: absolute;
-	top: 0.9;
+	top: 90%;
 	right: 0;
 	bottom: 0;
 	left: 0;
 
 	@include tablets {
-		display: none;
-	}
-}
-
-.slider__calories-tablets-img {
-	display: none;
-
-	@include tablets {
-		text-align: center;
-		display: block;
-		height: rem(80px);
-		width: rem(80px);
-		opacity: 0.4;
-		position: absolute;
 		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0.9;
+		left: 90%;
 	}
 }
 
@@ -225,11 +229,6 @@
 .slider__title {
 	color: #fff;
 	line-height: rem(64px);
-
-	@media screen and (max-width: 400px) {
-		margin-top: 0;
-		font-size: 2.5rem;
-	}
 }
 
 .slider__desc {
@@ -263,11 +262,15 @@
 }
 
 .arrow--left {
+	margin-bottom: 0;
+	padding-bottom: rem(20px);
 	display: inline-block;
 	transform: rotate(90deg);
 }
 
 .arrow--right {
+	margin-bottom: 0;
+	padding-bottom: rem(20px);
 	display: inline-block;
 	transform: rotate(-90deg);
 }

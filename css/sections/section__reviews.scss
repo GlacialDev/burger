@@ -48,10 +48,13 @@
 	padding: rem(20px);
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 
 	@include tab-phones {
 		padding: rem(5px);
+	}
+
+	@include phones {
+		justify-content: space-around;
 	}
 }
 
@@ -67,6 +70,7 @@
 	font-size: rem(14px);
 	line-height: rem(24px);
 	margin-bottom: rem(10px);
+	margin-top: rem(30px);
 
 	@include tab-phones {
 		line-height: 1.42em;
@@ -79,6 +83,7 @@
 
 .btn-more__link {
 	transition: 0.5s;
+	margin-top: rem(20px);
 	display: inline-block;
 	padding: rem(13px) rem(15px);
 	text-align: center;
