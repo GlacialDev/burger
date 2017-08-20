@@ -1,40 +1,22 @@
 .section--menu {
+	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 
-	@include tablets {
-		justify-content: flex-end;
-		position: relative;
-    }
 }
 
 .title--menu {
+	display: inline-block;
+	position: absolute;
+	left: 0;
 	margin-left: rem(88px);
     margin-top: rem(98px);
     color: #fff;
-
-    @include tablets {
-    	position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin-left: 1rem;
-		margin-top: 8rem;
-    }
-
-    @include tab-phones {
-		font-size: 2.5rem;
-	}
 }
 
 .menu__list {
 	display: flex;
 	flex-flow: row nowrap;
-
-	@include tablets {
-		flex-grow: 1;
-	}
 }
 
 .menu__item {
@@ -47,20 +29,26 @@
 	overflow: hidden;
 	
 	&.active > .menu__desc {
-		display: block;
+		max-width: rem(540px);
+		padding: rem(61px) rem(35px);
 	}
 
 	@include tablets {
-		min-width: 8%;
-	}
+		min-width: 4.875rem;
 
-	@include phones {
-		&.active ~ & {
-			display: none;
+		&.active > .menu__desc {
+			max-width: 100vw;
 		}
 
 		&.active .menu__name {
 			color: #f9b43b;
+		}
+	}
+
+	@include phones {
+		&.active ~ & {
+			width: 0;
+			min-width: 0;
 		}
 	}
 
@@ -93,6 +81,7 @@
 }
 
 .menu__name {
+	line-height: rem(78px);
 	font-family: 'Gagalin';
 	font-size: rem(40px);
 	text-transform: uppercase;
@@ -103,15 +92,20 @@
 
 	@include tablets {
 		text-align: initial;
+		padding-left: rem(48px);
+	}
+
+	@include phones {
+		padding-left: rem(80px);
 	}
 }
 
 .menu__desc {
 	transition: 0.5s;
-	display: none;
-	max-width: rem(540px);
+	max-width: 0;
+	padding: 0;
+	display: block;
 	height: 100vh;
-	padding: rem(61px) rem(35px) rem(61px) rem(34px);
 	background-color: rgb(47, 50, 52);
 	opacity: 0.929;
 	color: #fff;
@@ -119,10 +113,4 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	line-height: rem(24px);
-
-	@include tablets {
-		padding: rem(15px);
-		flex-grow: 1;
-		max-width: initial;
-	}
 }

@@ -17,19 +17,27 @@ $(document).ready(function() {
 	//вертикальный аккордеон в секции section__team
 	$('.team__member').on('click', function(e){
 		e.preventDefault();
-		var wrap = $(e.target).next('.team__member-wrap');
-		var info = $(e.target).next('.team__member-wrap').children('.team__member-info');
+		var wrap = $(e.target).next('.team__member-wrap'),
+			info = wrap.children('.team__member-info'),
+			item = $(e.target).parent('.team__item');
 
-		$(e.target).parent().toggleClass('active');
-		$(e.target).parent().siblings().removeClass('active');
+		item.toggleClass('active');
+		item.siblings().removeClass('active');
 
-		if ($(e.target).parent().hasClass('active')) {
+		if (item.hasClass('active')) {
 			$('.team__member-wrap').css({ 'height' : 0 });
 			wrap.css({ 'height' : info.height() });
 		} else {
 			$('.team__member-wrap').css({ 'height' : 0 });
 		} 
-
 	});
 
+	//горизонтальный аккордеон в секции section__menu
+	$('.menu__name').on('click', function(e){
+		e.preventDefault();
+		var item = $(e.target).parent().parent();
+		
+		item.toggleClass('active');
+		item.siblings().removeClass('active');
+	});
 });
