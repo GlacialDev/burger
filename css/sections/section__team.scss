@@ -32,6 +32,11 @@
 		margin-bottom: rem(140px);
 		text-align: center;
 	}
+
+	@include phones {
+		margin-top: 3.5rem;
+		margin-bottom: 3.5rem;
+	}
 }
 
 .team__list {

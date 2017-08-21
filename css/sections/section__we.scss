@@ -18,6 +18,7 @@
 
 	@include tablets {
 	margin-bottom: 0;
+	font-size: 3.5rem;
 	}
 }
 
@@ -70,7 +71,7 @@
 	}
 
 	@include phones {
-	min-width: 12rem;
+	min-width: 9rem;
 	}
 }
 

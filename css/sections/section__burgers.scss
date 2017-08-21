@@ -178,6 +178,10 @@
 		top: 0;
 		left: 90%;
 	}
+
+	@include phones {
+		left: 85%;
+	}
 }
 
 .slider__btn-img {
@@ -230,6 +234,10 @@
 .slider__title {
 	color: #fff;
 	line-height: rem(64px);
+
+	@include phones {
+		font-size: 3.5rem;
+	}
 }
 
 .slider__desc {

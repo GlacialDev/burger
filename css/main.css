@@ -1709,7 +1709,8 @@ h1, h2, h3 {
       margin-bottom: 10rem; } }
   @media screen and (max-width: 768px) {
     .title--we {
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      font-size: 3.5rem; } }
 
 .features {
   display: -webkit-box;
@@ -1770,7 +1771,7 @@ h1, h2, h3 {
       width: 6rem; } }
   @media screen and (max-width: 480px) {
     .features__img {
-      min-width: 12rem; } }
+      min-width: 9rem; } }
 
 @media screen and (max-width: 480px) {
   .features__text {
@@ -2014,6 +2015,9 @@ h1, h2, h3 {
     .slider__calories-img {
       top: 0;
       left: 90%; } }
+  @media screen and (max-width: 480px) {
+    .slider__calories-img {
+      left: 85%; } }
 
 .slider__btn-img {
   height: 2.8125rem;
@@ -2055,6 +2059,9 @@ h1, h2, h3 {
 .slider__title {
   color: #fff;
   line-height: 4rem; }
+  @media screen and (max-width: 480px) {
+    .slider__title {
+      font-size: 3.5rem; } }
 
 .slider__desc {
   margin-top: 2.1875rem;
@@ -2143,6 +2150,10 @@ h1, h2, h3 {
       margin-top: 7.5rem;
       margin-bottom: 8.75rem;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .team__title {
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem; } }
 
 .team__list {
   width: 70%; }
@@ -2292,6 +2303,9 @@ h1, h2, h3 {
   .menu__item.active > .menu__desc {
     max-width: 33.75rem;
     padding: 3.8125rem 2.1875rem; }
+    @media screen and (max-width: 480px) {
+      .menu__item.active > .menu__desc {
+        padding: 1rem 1rem; } }
   @media screen and (max-width: 768px) {
     .menu__item {
       min-width: 4.875rem; }
@@ -2307,6 +2321,9 @@ h1, h2, h3 {
     right: 0;
     bottom: 0;
     background-color: rgba(20, 20, 20, 0.7); }
+  @media screen and (max-width: 480px) {
+    .menu__item {
+      min-width: 3.5rem; } }
 
 .menu__img {
   max-width: 4.875rem;
@@ -2325,6 +2342,9 @@ h1, h2, h3 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .menu__img {
+      max-width: 3.5rem; } }
 
 .menu__img--1 {
   background-image: url(../img/section__menu/photo-1.jpg); }
@@ -2369,6 +2389,9 @@ h1, h2, h3 {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.5rem; }
+  @media screen and (max-width: 480px) {
+    .menu__desc {
+      font-size: 0.8125rem; } }
 
 .review__popup {
   max-width: 28.75rem;
@@ -2627,7 +2650,7 @@ form {
         text-align: center; } }
   @media screen and (max-width: 480px) {
     .form__row {
-      margin-bottom: 2rem; } }
+      margin-bottom: 1rem; } }
 
 .form__block {
   min-width: 0rem;
@@ -2815,7 +2838,7 @@ form {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  background-image: url(../img/section__contacts/map.jpg);
+  /*background-image: url(../img/section__contacts/map.jpg);*/
   background-position: center center;
   background-size: cover; }
 

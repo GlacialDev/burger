@@ -31,6 +31,10 @@
 	&.active > .menu__desc {
 		max-width: rem(540px);
 		padding: rem(61px) rem(35px);
+
+		@include phones {
+			padding: 1rem 1rem;
+		}
 	}
 
 	@include tablets {
@@ -54,6 +58,10 @@
 		bottom: 0;
 		background-color: rgba(20, 20, 20, 0.7);
 	}
+
+	@include phones {
+		min-width: 3.5rem;
+	}
 }
 
 
@@ -65,12 +73,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@include phones {
+		max-width: 3.5rem;
+	}
 }
 
 @each $number in (1, 2, 3) {
 	.menu__img--#{$number} {
 		background-image: url(../img/section__menu/photo-#{$number}.jpg);
 	}
+
 }
 
 .menu__name {
@@ -106,4 +119,8 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	line-height: rem(24px);
+
+	@include phones {
+		font-size: rem(13px);
+	}
 }

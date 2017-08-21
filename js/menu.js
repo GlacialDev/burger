@@ -40,4 +40,35 @@ $(document).ready(function() {
 		item.toggleClass('active');
 		item.siblings().removeClass('active');
 	});
+
+	//подключение карты
+	ymaps.ready(init);
+	var myMap;
+	function init(){     
+		myMap = new ymaps.Map("map", {
+			center: [59.942037, 30.326865],
+			zoom: 12,
+			controls: []
+		});
+	myMap.behaviors.disable('scrollZoom');
+
+	var coords = [
+		[59.972641, 30.311758], [59.946128, 30.386945], 
+		[59.893901, 30.317251], [59.916146, 30.493895]
+	],
+
+	myCollection = new ymaps.GeoObjectCollection({}, {
+		draggable: false,
+		iconLayout: 'default#image',  //все метки - картинки
+		iconImageHref: 'img/section__contacts/map-marker.png',
+		iconImageSize: [46, 57],
+		iconImageOffset: [-26, -52]
+	});
+
+	for (var i = 0; i < coords.length; i++) {
+		myCollection.add(new ymaps.Placemark(coords[i]));
+	}
+	myMap.geoObjects.add(myCollection);
+	}
+
 });
