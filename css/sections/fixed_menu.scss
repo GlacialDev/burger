@@ -1,0 +1,40 @@
+.right-nav {
+	position: fixed;
+	top: 6.25rem;
+	right: 4%;
+	z-index: 700;
+}
+
+.right-nav__item:first-child {
+	margin-top: 0;
+}
+
+.right-nav__item {
+	position: relative;
+	margin-top: .4375rem;
+	display: flex;
+	width: 16px;
+	height: 16px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+
+	&:hover {
+		border-color: #fff;
+	}
+
+	&.active {
+		border-color: #fff;
+	}
+}
+
+.right-nav__link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: inline-block;
+	width: .3125rem;
+	height: .3125rem;
+	border-radius: 50%;
+	background-color: #fff;
+	transform: translate(-50%,-50%);
+}
