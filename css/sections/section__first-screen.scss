@@ -167,11 +167,17 @@
 	
 	@include tab-phones {
 		margin-top: 0rem;
-		transform: scale(0.9);
+		/*transform: scale(0.9);*/
+		& > img {
+			width: 90%;
+		}
 	}
 
 	@include phones {
-		transform: scale(0.8);
+		/*transform: scale(0.8);*/
+		& > img {
+			width: 80%;
+		}
 	}
 }
 

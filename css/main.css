@@ -1494,14 +1494,14 @@ h1, h2, h3 {
   @media screen and (max-width: 600px) {
     .burger__image {
       margin-top: 0rem;
-      -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      transform: scale(0.9); } }
+      /*transform: scale(0.9);*/ }
+      .burger__image > img {
+        width: 90%; } }
   @media screen and (max-width: 480px) {
     .burger__image {
-      -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      transform: scale(0.8); } }
+      /*transform: scale(0.8);*/ }
+      .burger__image > img {
+        width: 80%; } }
 
 @media screen and (max-width: 600px) {
   .title--burger {
