@@ -50,6 +50,7 @@ $(document).ready(function() {
 			zoom: 12,
 			controls: []
 		});
+	myMap.behaviors.disable('drag');
 	myMap.behaviors.disable('scrollZoom');
 
 	var coords = [
