@@ -243,3 +243,27 @@ form {
 			align-items: center;
 		}
 }
+
+.form__modal {
+	text-align: center;
+	font-family: 'ubuntu';
+	font-size: 14px;
+	font-weight: 300;
+	box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
+	border-radius: rem(5px);
+}
+
+.form__modal-close {
+	margin-top: 20px;
+	font-family: 'ubuntu';
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+	cursor: pointer;
+	background-color: rgb(228, 80, 40);
+	border-radius: rem(5px);
+	width: rem(97px);
+	height: rem(35px);
+	text-transform: uppercase;
+	border: 0;
+}

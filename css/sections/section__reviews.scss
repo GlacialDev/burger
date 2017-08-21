@@ -1,3 +1,43 @@
+.review__popup {
+	max-width: rem(460px);
+	border-radius: rem(5px);
+}
+
+.review__popup-text {
+	font-family: 'Ubuntu';
+	font-weight: 300;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	margin-bottom: rem(10px);
+	margin-top: rem(30px);
+
+	@include tab-phones {
+		line-height: 1.42em;
+	}
+}
+
+.fancybox-close-small {
+	&:after {
+		color: rgba(228, 80, 40, 0.702);
+	}
+
+	&:hover:after {
+		color: rgba(228, 80, 40, 0.702);
+	}
+}
+
+.close {
+  background-color: rgb(228, 80, 40);
+  opacity: 0.702;
+  position: absolute;
+  left: 745px;
+  top: 3467px;
+  width: 15px;
+  height: 15px;
+  z-index: 224;
+}
+
+
 .section--reviews {
 	background-color: #141414;
 }
