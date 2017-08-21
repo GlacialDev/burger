@@ -45,14 +45,7 @@
 		}
 	}
 
-	@include phones {
-		&.active ~ & {
-			width: 0;
-			min-width: 0;
-		}
-	}
-
-		&:before {
+	&:before {
 		content: '';
 		position: absolute;
 		top: 0;
