@@ -219,4 +219,28 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	//форма
+	$('.order__btn-buy').on('click', function(e) {
+		// e.preventDefault();
+
+		var form = $(e.target),
+			url = form.attr('action'),
+			data = form.serialize();
+
+		var request = $.ajax({
+			type: 'POST',
+			url: url,
+			data: data
+		});
+
+		request.done(function(msg) {
+			// alert(msg);
+		});
+
+	});
+
+
+
+
 });

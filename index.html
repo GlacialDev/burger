@@ -740,41 +740,41 @@
 			<section class="section section--form">
 				<div class="container container--form">
 					<h2 class="title title--form">Закажите доставку</h2>
-					<form action="">
+					<form action="server.php" method="post">
 						<div class="form">
 							<div class="form__part">
 								<div class="form__row">
 									<label class="form__block">
 										<div class="form__block-name">Имя</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="name">
 									</label>
 									<label class="form__block">
 										<div class="form__block-name">Телефон</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="phone">
 									</label>
 								</div>
 								<div class="form__row">
 									<label class="form__block">
 										<div class="form__block-name">Улица</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="street">
 									</label>
 								</div>
 								<div class="form__row">
 									<label class="form__block">
 										<div class="form__block-name">Дом</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="house">
 									</label>
 									<label class="form__block">
 										<div class="form__block-name">Корпус</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="corpus">
 									</label>
 									<label class="form__block">
 										<div class="form__block-name">Квартира</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="flat">
 									</label>
 									<label class="form__block form__block--no-phone">
 										<div class="form__block-name">Этаж</div>
-										<input type="text" class="form__input">
+										<input type="text" class="form__input" name="floor">
 									</label>
 								</div>						
 							</div>
@@ -782,30 +782,31 @@
 								<div class="form__row">
 									<label class="form__block">
 										<div class="form__block-name">Комментарий</div>
-										<textarea class="form__textarea"></textarea>
+										<textarea class="form__textarea" name="comment"></textarea>
 									</label>
 								</div>
 								<div class="form__row form__row--radio">
 									<label class="form__block-radio">
-										<input type="radio" name="pay" class="form__radio-btn">
+										<input type="radio" name="pay" class="form__radio-btn" value="Потребуется сдача">
 										<div class="form__radio-fake"></div>
 										<div class="form__block-name">Потребуется сдача</div>
 									</label>
 									<label class="form__block-radio">
-										<input type="radio" name="pay" class="form__radio-btn">
+										<input type="radio" name="pay" class="form__radio-btn" value="Оплата по карте">
 										<div class="form__radio-fake"></div>
 										<div class="form__block-name">Оплата по карте</div>
 									</label>
 								</div>
 								<div class="form__row form__row--checkbox">
 									<label class="form__block-checkbox">
-										<input type="checkbox" class="form__checkbox">
+										<input type="checkbox" class="form__checkbox" name="dont-disturb" value="1">
 										<div class="form__checkbox-fake"></div>
 										<div class="form__block-name">Не перезванивать</div>
 									</label>
 								</div>
 								<div class="form__btns-block">
-									<button type="submit" a data-fancybox data-options='{"src": "#form__modal", "modal": true}' href="javascript:;" class="order__btn">Заказать</button>
+									<button type="submit"  class="order__btn order__btn-buy">Заказать</button>
+									<!-- data-fancybox data-options='{"src": "#form__modal", "modal": true}' href="javascript:;" -->
 									<button type="reset" class="clear__btn">Очистить</button>
 								</div>
 								<div style="display: none;" id="form__modal" class="form__modal">
