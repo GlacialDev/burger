@@ -1734,7 +1734,7 @@ h1, h2, h3 {
     text-decoration: underline; }
 
 .container--we {
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
