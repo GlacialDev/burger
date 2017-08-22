@@ -42,12 +42,14 @@ $(document).ready(function() {
 	});
 
 	//подключение карты
-	function init(){
+	function init() {
+
 	var	myMap = new ymaps.Map("map", {
 			center: [59.942037, 30.326865],
 			zoom: 12,
 			controls: []
 		});
+
 	myMap.behaviors.disable('drag');
 	myMap.behaviors.disable('scrollZoom');
 
@@ -78,9 +80,9 @@ $(document).ready(function() {
 			screenPositionNow = 0;
 			scrolling = false;
 
-		var relocate = function (sectionPosition) { //функция смещения на следующую секцию
+		var relocate = function (sectionPosition) { //функция смещения на другую секцию
 
-			if(!scrolling) { //если уже идет скролл, нельзя еще раз скроллить
+			if(!scrolling) { //если уже идет скролл, нельзя заново вызвать функцию
 				scrolling = true;
 
 				var position = (sectionPosition * -100) + '%';
@@ -96,14 +98,14 @@ $(document).ready(function() {
 					scrolling = false;
 					$('.right-nav__item').eq(sectionPosition).addClass('active')
 						.siblings().removeClass('active');
-				}, 1300);
+				}, 800);
 			}
 		}
 
-		$('.wrapper').on('wheel', function(e) { //функция слежения за направлением движения колесика
+		$('.wrapper').on('wheel', function(e) { //функция слежения за направлением движения колесика мыши
 
-		var	screenNum = screenPositionNow, //внутренняя переменная (аналог внешней screenPositionNow)
-			deltaY = e.originalEvent.deltaY; //отслеживание движения колесика мышки (вверх/вниз)
+			var	screenNum = screenPositionNow, //внутренняя переменная (аналог внешней screenPositionNow)
+				deltaY = e.originalEvent.deltaY; //отслеживание движения колесика мышки (вверх/вниз)
 
 			if(!scrolling) { //если уже идет скролл, screenNum нельзя изменить
 				if (deltaY < 0 & screenNum > firstSection) {
@@ -122,7 +124,7 @@ $(document).ready(function() {
 			relocate(screenPositionNow);
 		});
 
-		$('[data-scroll]').on('click', function(e) { // нав-меню точками справа
+		$('[data-scroll]').on('click', function(e) { // клики по нав-меню точками справа
 			e.preventDefault();
 
 			var item = e.target;
@@ -133,7 +135,7 @@ $(document).ready(function() {
 		});
 
 
-		$(window).swipe( {
+		$(window).swipe( { //свайп-движения для мобильных
 			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 
 			var	screenNum = screenPositionNow;
@@ -153,20 +155,68 @@ $(document).ready(function() {
 			screenPositionNow = screenNum; //изменение значения внешней переменной
 
 			relocate(screenPositionNow);
-
 			}
 		});
-		
+	});
+
+	//слайдер 
+	$(function() {
+		var screen = $('.slider__list'),
+			slide = $('.slider__item'),
+			right = $('.arrow--right'),
+			left = $('.arrow--left'),
+			slideNum = 0,
+			scrolling = false;
 
 
-		// почему не залезает в Touch?
-		// $('.wrapper').on('touchstart', function(e) {
-		// 	console.log(e.changedTouches);
-		// });
-		// $('.wrapper').on('touchend', function(e) {
-		// 	console.log(e.changedTouches.TouchList.Touch.clientY);
-		// });
+		var relocate = function (slideNum) { //функция смещения на другой слайд
 
+			if(!scrolling) { //если уже идет скролл, нельзя заново вызвать функцию
+				scrolling = true;
 
+				var position = (slideNum * -100) + '%';
+
+				screen.css({
+					'-webkit-transform:' : 'translateX(' + position + ')',
+					'-ms-transform:' : 'translateX(' + position + ')',
+					'transform' : 'translateX(' + position + ')',
+
+				});
+
+				setTimeout(function() {
+					scrolling = false;
+					$('.slider__item').eq(slideNum).addClass('active')
+						.siblings().removeClass('active');
+				}, 800);
+			}
+		}
+
+		$(left).on('click', function(e){
+			e.preventDefault();
+
+			if(!scrolling) { //если уже идет скролл, slideNum нельзя изменить
+				if (slideNum > 0) {
+					slideNum--;
+					relocate(slideNum);
+				} else {
+					slideNum = slide.length - 1;
+					relocate(slideNum);
+				}
+			}
+		});
+
+		$(right).on('click', function(e){
+			e.preventDefault();
+
+			if(!scrolling) { //если уже идет скролл, slideNum нельзя изменить
+				if (slideNum < slide.length - 1) {
+					slideNum++;
+					relocate(slideNum);
+				} else {
+					slideNum = 0;
+					relocate(slideNum);
+				}
+			}
+		});
 	});
 });
