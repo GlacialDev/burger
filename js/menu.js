@@ -131,5 +131,42 @@ $(document).ready(function() {
 
 			relocate(screenPositionNow);
 		});
+
+
+		$(window).swipe( {
+			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+
+			var	screenNum = screenPositionNow;
+
+			if(!scrolling) { //если уже идет скролл, screenNum нельзя изменить
+				if (direction === 'down' & screenNum > firstSection) {
+					//листаем вверх, если мы не на первой секции
+					screenNum--;
+				};
+
+				if (direction === 'up' & screenNum < lastSection) { 
+					//листаем вниз, если мы не на последней секции
+					screenNum++;
+				};
+			}
+
+			screenPositionNow = screenNum; //изменение значения внешней переменной
+
+			relocate(screenPositionNow);
+
+			}
+		});
+		
+
+
+		// почему не залезает в Touch?
+		// $('.wrapper').on('touchstart', function(e) {
+		// 	console.log(e.changedTouches);
+		// });
+		// $('.wrapper').on('touchend', function(e) {
+		// 	console.log(e.changedTouches.TouchList.Touch.clientY);
+		// });
+
+
 	});
 });
