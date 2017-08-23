@@ -42,11 +42,8 @@
 	$headers = "From: Администратор сайта <admin@loftschool.com>\r\n".
     "MIME-Version: 1.0" . "\r\n" .
     "Content-type: text/html; charset=UTF-8" . "\r\n";
-    // echo $mail_message;
-    // echo $headers;
 
 	$mail = mail('kli-van@yandex.ru', 'Заказ', $mail_message, $headers);
-	// echo $mail;
 
 	if ($mail) {
 		echo 'done';

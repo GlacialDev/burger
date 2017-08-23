@@ -4,18 +4,18 @@ $(document).ready(function() {
 		menu = $('.hamburger-menu');
 
 	//гамбургер-меню для мобильных устройств в секции section__first-screen
-	$(menuOff).on('click', function(e){
+	$(menuOff).on('click touchstart', function(e){
 		e.preventDefault();
 		$(menu).toggleClass('active');
 	});
 
-	$(menuOn).on('click', function(e){
+	$(menuOn).on('click touchstart', function(e){
 		e.preventDefault();
 		$(menu).addClass('active');
 	});
 
 	//вертикальный аккордеон в секции section__team
-	$('.team__member').on('click', function(e){
+	$('.team__member').on('click touchstart', function(e){
 		e.preventDefault();
 		var wrap = $(e.target).next('.team__member-wrap'),
 			info = wrap.children('.team__member-info'),
@@ -33,7 +33,7 @@ $(document).ready(function() {
 	});
 
 	//горизонтальный аккордеон в секции section__menu
-	$('.menu__name').on('click', function(e){
+	$('.menu__name').on('click touchstart', function(e){
 		e.preventDefault();
 		var item = $(e.target).parent().parent();
 		
@@ -77,8 +77,10 @@ $(document).ready(function() {
 		var screen = $('.one-page-scroll'),
 			firstSection = $('.section--first-screen').index(),
 			lastSection = $('section').length - 1,
-			screenPositionNow = 0;
-			scrolling = false;
+			screenPositionNow = 0,
+			scrolling = false,
+			md = new MobileDetect(window.navigator.userAgent), //проверка на девайс пользователя
+			isMobile = md.mobile(); //null если не с мобильного/планшета
 
 		var relocate = function (sectionPosition) { //функция смещения на другую секцию
 
@@ -91,7 +93,6 @@ $(document).ready(function() {
 					'-webkit-transform:' : 'translateY(' + position + ')',
 					'-ms-transform:' : 'translateY(' + position + ')',
 					'transform' : 'translateY(' + position + ')',
-
 				});
 
 				setTimeout(function() {
@@ -124,7 +125,7 @@ $(document).ready(function() {
 			relocate(screenPositionNow);
 		});
 
-		$('[data-scroll]').on('click', function(e) { // клики по нав-меню точками справа
+		$('[data-scroll]').on('click touchstart', function(e) { // клики по нав-меню точками справа
 			e.preventDefault();
 
 			var item = e.target;
@@ -134,29 +135,30 @@ $(document).ready(function() {
 			relocate(screenPositionNow);
 		});
 
+		if (isMobile) { //скролл свайп-движениями включается только если это планшет/телефон
+			$(window).swipe( { //свайп-движения для мобильных
+				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 
-		$(window).swipe( { //свайп-движения для мобильных
-			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+				var	screenNum = screenPositionNow;
 
-			var	screenNum = screenPositionNow;
+				if(!scrolling) { //если уже идет скролл, screenNum нельзя изменить
+					if (direction === 'down' & screenNum > firstSection) {
+						//листаем вверх, если мы не на первой секции
+						screenNum--;
+					};
 
-			if(!scrolling) { //если уже идет скролл, screenNum нельзя изменить
-				if (direction === 'down' & screenNum > firstSection) {
-					//листаем вверх, если мы не на первой секции
-					screenNum--;
-				};
+					if (direction === 'up' & screenNum < lastSection) { 
+						//листаем вниз, если мы не на последней секции
+						screenNum++;
+					};
+				}
 
-				if (direction === 'up' & screenNum < lastSection) { 
-					//листаем вниз, если мы не на последней секции
-					screenNum++;
-				};
-			}
+				screenPositionNow = screenNum; //изменение значения внешней переменной
 
-			screenPositionNow = screenNum; //изменение значения внешней переменной
-
-			relocate(screenPositionNow);
-			}
-		});
+				relocate(screenPositionNow);
+				}
+			});
+		}
 	});
 
 	//слайдер 
@@ -191,7 +193,7 @@ $(document).ready(function() {
 			}
 		}
 
-		$(left).on('click', function(e){
+		$(left).on('click touchstart', function(e){
 			e.preventDefault();
 
 			if(!scrolling) { //если уже идет скролл, slideNum нельзя изменить
@@ -205,7 +207,7 @@ $(document).ready(function() {
 			}
 		});
 
-		$(right).on('click', function(e){
+		$(right).on('click touchstart', function(e){
 			e.preventDefault();
 
 			if(!scrolling) { //если уже идет скролл, slideNum нельзя изменить
@@ -221,8 +223,8 @@ $(document).ready(function() {
 	});
 
 	//форма
-	$('.order__btn-buy').on('click', function(e) {
-		// e.preventDefault();
+	$('.order__btn-buy').on('click touchstart', function(e) {
+		e.preventDefault();
 
 		var form = $(e.target),
 			url = form.attr('action'),
@@ -233,11 +235,6 @@ $(document).ready(function() {
 			url: url,
 			data: data
 		});
-
-		request.done(function(msg) {
-			// alert(msg);
-		});
-
 	});
 
 
