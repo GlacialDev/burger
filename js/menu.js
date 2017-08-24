@@ -128,11 +128,16 @@ $(document).ready(function() {
 		$('[data-scroll]').on('click touchstart', function(e) { // клики по нав-меню точками справа
 			e.preventDefault();
 
-			var item = e.target;
+			var item = e.target,
+				isMobileNav = $(item).hasClass('nav-hamburger__link');
 
 			screenPositionNow = $(item).attr('data-scroll')
 
 			relocate(screenPositionNow);
+
+			if(isMobileNav) { //закрытие нав-меню из гамбургера после перехода по ссылке
+				$(menu).toggleClass('active');
+			}
 		});
 
 		if (isMobile) { //скролл свайп-движениями включается только если это планшет/телефон
@@ -236,8 +241,5 @@ $(document).ready(function() {
 			data: data
 		});
 	});
-
-
-
 
 });
